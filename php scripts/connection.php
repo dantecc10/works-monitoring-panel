@@ -1,7 +1,7 @@
 <?php
 // Cargar Composer autoload y la clase Dotenv
 require_once __DIR__ . '/vendor/autoload.php';
-
+include_once "functions.php";
 // Usar la clase Dotenv para cargar las variables de entorno desde .env
 use Dotenv\Dotenv;
 
