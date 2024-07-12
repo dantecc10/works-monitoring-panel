@@ -4,5 +4,119 @@
   --color-3: #326273;
   --color-4: #A5978B;
   --color-5: #F75C03;
+  --main-font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.main-font-thin {
+  font-family: --main-font-family;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.main-font-extralight {
+  font-family: --main-font-family;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.main-font-light {
+  font-family: --main-font-family;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.main-font-regular, .main-font {
+  font-family: --main-font-family;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-font-medium {
+  font-family: --main-font-family;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.main-font-semibold {
+  font-family: --main-font-family;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main-font-bold {
+  font-family: --main-font-family;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.main-font-extrabold {
+  font-family: --main-font-family;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.main-font-black {
+  font-family: --main-font-family;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.main-font-thin-italic {
+  font-family: --main-font-family;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.main-font-extralight-italic {
+  font-family: --main-font-family;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.main-font-light-italic {
+  font-family: --main-font-family;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.main-font-regular-italic {
+  font-family: --main-font-family;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.main-font-medium-italic {
+  font-family: --main-font-family;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.main-font-semibold-italic {
+  font-family: --main-font-family;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.main-font-bold-italic {
+  font-family: --main-font-family;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.main-font-extrabold-italic {
+  font-family: --main-font-family;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.main-font-black-italic {
+  font-family: --main-font-family;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.main-gradient {
+  background: rgb(50, 98, 115);
+  background: linear-gradient(135deg, rgba(50, 98, 115, 1) 35%, rgba(165, 151, 139, 1) 100%);
 }
 
