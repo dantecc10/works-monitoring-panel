@@ -121,7 +121,7 @@
 }
 
 .bg-color-1 {
-  background-color: var(--color-1);
+  background-color: var(--color-1) !important;
 }
 
 .bg-color-1:hover {
@@ -130,7 +130,7 @@
 }
 
 .bg-color-2 {
-  background-color: var(--color-2);
+  background-color: var(--color-2) !important;
 }
 
 .bg-color-2:hover {
@@ -139,7 +139,7 @@
 }
 
 .bg-color-3 {
-  background-color: var(--color-3);
+  background-color: var(--color-3) !important;
 }
 
 .bg-color-3:hover {
@@ -148,7 +148,7 @@
 }
 
 .bg-color-4 {
-  background-color: var(--color-4);
+  background-color: var(--color-4) !important;
 }
 
 .bg-color-4:hover {
@@ -157,7 +157,7 @@
 }
 
 .bg-color-5 {
-  background-color: var(--color-5);
+  background-color: var(--color-5) !important;
 }
 
 .bg-color-5:hover {
