@@ -1,1 +1,3 @@
-sudo cp /home/darkseid/Documents/works-monitoring-panel/* /media/darkseid/DATA1/Repos/works-monitoring-panel
+sudo git status
+sudo git add *
+sudo git commit -m "Avances de diseño"
