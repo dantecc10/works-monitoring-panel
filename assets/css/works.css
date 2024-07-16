@@ -4,6 +4,7 @@
   --color-3: #326273;
   --color-4: #A5978B;
   --color-5: #F75C03;
+  --color-6: #00374b;
   --main-font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -165,6 +166,15 @@
   opacity: 80%;
 }
 
+.bg-color-6 {
+  background-color: var(--color-6) !important;
+}
+
+.bg-color-6:hover {
+  background-color: var(--color-6);
+  opacity: 80%;
+}
+
 .color-1 {
   color: var(--color-1) !important;
 }
@@ -183,5 +193,9 @@
 
 .color-5 {
   color: var(--color-5) !important;
+}
+
+.color-6 {
+  color: var(--color-6) !important;
 }
 
