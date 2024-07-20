@@ -10,3 +10,6 @@ function check_internet_connection()
     }
     //echo (check_internet_connection()) ? "Hay conexión a Internet." : "No hay conexión a Internet.";
 }
+function show_projects($id){
+    include "connection.php";
+}

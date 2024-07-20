@@ -2,9 +2,6 @@
 // Cargar Composer autoload y la clase Dotenv
 require_once __DIR__ . '/vendor/autoload.php';
 
-// Incluir el archivo functions.php para cargar scripts de funciones
-include_once "functions.php";
-
 // Usar la clase Dotenv para cargar las variables de entorno desde .env
 use Dotenv\Dotenv;
 
