@@ -1,7 +1,7 @@
 <?php
 function check_internet_connection()
 {
-    $conn = @fsockopen('obras.bmdesign.tech', 80);
+    $conn = @fsockopen('obras.bmdesign.tech', 80);cd 
     if ($conn) {
         fclose($conn);
         return true; // Conexión exitosa
