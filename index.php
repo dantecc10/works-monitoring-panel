@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Table - BM Design</title>
+    <title>Panel de obras - BM Design</title>
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta name="description" content="Plataforma de administración de obras y construcción.">
     <script type="application/ld+json">
