@@ -11,7 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Conexión fallida: " . $connection->connect_error);
     }
 
-    $sql = "SELECT `id_user`, `email_user`, `password_user` FROM `users` WHERE `email_user` = ?";
+    /*`id_user`, `email_user`, `password_user`*/
+    $sql = "SELECT * FROM `users` WHERE `email_user` = ?";
     if ($stmt = $connection->prepare($sql)) {
         $param_username = $email;
         $stmt->bind_param("s", $param_username);
@@ -20,12 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->store_result();
 
             if ($stmt->num_rows == 1) {
-                $stmt->bind_result($id_user, $email_user, $hashed_password);
+                $stmt->bind_result($id_user, $name_user, $last_names_user, $email_user, $hashed_password, $role_user, $icon_user);
                 if ($stmt->fetch()) {
                     if ($password === $hashed_password) {
                         $_SESSION['loggedin'] = true;
                         $_SESSION['id_user'] = $id_user;
                         $_SESSION['email_user'] = $email_user;
+                        $_SESSION['role_user'] = $role_user;
+                        $_SESSION['icon_user'] = $icon_user;
+                        $_SESSION['name_user'] = $name_user;
+                        $_SESSION['last_names_user'] = $last_names_user;
                         header("location: ../index.php");
                     } else {
                         echo "La contraseña no es válida.";
