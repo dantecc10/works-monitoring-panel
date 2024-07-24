@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->num_rows == 1) {
                 $stmt->bind_result($id_user, $email_user, $hashed_password);
                 if ($stmt->fetch()) {
-                    if (password_verify($password, $hashed_password)) {
+                    if ($password === $hashed_password) {
                         $_SESSION['loggedin'] = true;
                         $_SESSION['id_user'] = $id_user;
                         $_SESSION['email_user'] = $email_user;
