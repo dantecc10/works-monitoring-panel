@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "SELECT `id_user`, `email_user`, `password_user` FROM `users` WHERE `email_user` = ?";
     if ($stmt = $connection->prepare($sql)) {
+        $param_username = $email;
         $stmt->bind_param("s", $param_username);
-        $param_username = $email_user;
 
         if ($stmt->execute()) {
             $stmt->store_result();
