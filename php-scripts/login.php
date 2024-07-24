@@ -26,8 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION['loggedin'] = true;
                         $_SESSION['id_user'] = $id_user;
                         $_SESSION['email_user'] = $email_user;
-
-                        header("location: welcome.php");
+                        header("location: ../index.php");
                     } else {
                         echo "La contraseña no es válida.";
                     }
