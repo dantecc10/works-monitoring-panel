@@ -11,5 +11,19 @@ function check_internet_connection()
     //echo (check_internet_connection()) ? "Hay conexión a Internet." : "No hay conexión a Internet.";
 }
 function show_projects($id){
-    include "connection.php";
+    include_once "connection.php";
+    $sql = "SELECT * FROM `projects` WHERE `owner_project` = ?";
+
+    if ($stmt = $connection->prepare($sql)) {
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        foreach ($result as $project) {
+            echo str_replace("FLAG", $project['name_project'], $project_dom);
+        }
+
+        $stmt->close();
+
+        $connection->close();
+    }
 }

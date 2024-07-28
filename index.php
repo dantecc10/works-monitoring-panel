@@ -177,7 +177,9 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="col col-12 px-0">
                                     <div class="accordion" role="tablist" id="accordion-1">
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">Construcción de Centro Comercial "3 Estrellas"</button></h2>
+                                            <h2 class="accordion-header" role="tab">
+                                                <button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">Construcción de Centro Comercial "3 Estrellas"</button>
+                                            </h2>
                                             <div class="accordion-collapse collapse item-1 bg-color-2" role="tabpanel" data-bs-parent="#accordion-1">
                                                 <div class="accordion-body">
                                                     <div class="row">
