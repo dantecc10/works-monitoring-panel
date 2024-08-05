@@ -176,7 +176,7 @@ if (!isset($_SESSION['loggedin'])) {
                             <div class="row my-1">
                                 <div class="col col-12 px-0">
                                     <?php
-                                    include "php-scripts/connection.php";
+                                    include "php-scripts/functions.php";
                                     echo show_projects($_SESSION['id_user']);
                                     ?>
 
