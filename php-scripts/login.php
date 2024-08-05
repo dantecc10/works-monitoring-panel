@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION['last_names_user'] = $last_names_user;
                         header("location: ../index.php");
                     } else {
-                        echo "La contraseña no es válida.";
+                        header("location: ../login.php?error=incorrect_password");
                     }
                 }
             } else {
