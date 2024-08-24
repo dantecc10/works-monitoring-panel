@@ -70,4 +70,5 @@ function data_fetcher($connection, $element_id, $type)
     return ($result->num_rows > 0) ? $result->fetch_assoc() : false;
 }
 $data = data_fetcher($connection, 1, 'user');
+print_r($data);
 echo ("Esto es mi rol: " . $data['job_user']);
