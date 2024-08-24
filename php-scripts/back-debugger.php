@@ -10,3 +10,6 @@ function fetch_team_data($connection, $team_id)
 }
 
 print_r (fetch_team_data($connection, 1));
+$data = (fetch_team_data($connection, 1));
+
+echo ("Esto es en nombre del equipo: " . $data['company_team']);
