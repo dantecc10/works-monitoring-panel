@@ -40,7 +40,20 @@ function data_fetcher($connection, $element_id, $type)
             $query = ""; // Lógica para 'value'
             break;
         case 'user':
-            $query = ""; // Lógica para 'user'
+            $query = "SELECT 
+            `u`.`id_user`,
+            `u`.`name_user`, 
+            `u`.`last_names_user`, 
+            `u`.`email_user`,
+            `u`.`role_user`,
+            `u`.`icon_user`, 
+            CASE 
+                WHEN `u`.`role_user` = 1 THEN 'Propietario'
+                WHEN `u`.`role_user` = 2 THEN 'Equipo de Trabajo'
+                WHEN `u`.`role_user` = 3 THEN 'Administrador'
+                ELSE 'Rol Desconocido'
+            END AS `job_user`
+                FROM `users` `u` WHERE `u`.`id_user`= ?"; // Lógica para 'user'
             break;
         case 'task':
             $query = ""; // Lógica para 'task'
@@ -56,5 +69,5 @@ function data_fetcher($connection, $element_id, $type)
 
     return ($result->num_rows > 0) ? $result->fetch_assoc() : false;
 }
-$data = data_fetcher($connection, 1, 'team');
-echo ("Esto es en nombre del equipo: " . $data['company_team']);
+$data = data_fetcher($connection, 1, 'user');
+echo ("Esto es mi rol: " . $data['job_user']);
