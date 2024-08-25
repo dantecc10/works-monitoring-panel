@@ -59,20 +59,23 @@ function data_fetcher($connection, $element_id, $type)
                 FROM `users` `u` WHERE `u`.`id_user`= ?"; // Lógica para 'user'
             break;
         case 'task':
-
-            $query = "SELECT 
-                            `t`.*, 
-                            `p`.`name_project` AS `project_name`,
+            $query = "SELECT `t`.*, `p`.`name_project` AS `project_name`,
                             `tm`.`company_team` AS `team_name`
-                        FROM 
-                            `tasks` `t`
-                        JOIN 
+                        FROM `tasks` `t` JOIN 
                             `projects` `p` ON `t`.`id_project_task` = `p`.`id_project`
                         JOIN 
                             `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
                         WHERE 
                             `t`.`id_task` = ?;"; // Lógica para 'task'
             break;
+        case "teams":
+            $query = "SELECT DISTINCT `tm`.`id_team`
+                        FROM `tasks` `t`
+                        JOIN 
+                            `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
+                        WHERE `t`.`id_project_task` = 2 ORDER BY 
+                            `tm`.`id_team` ASC;";
+
         default:
             return false;
     }
@@ -84,6 +87,6 @@ function data_fetcher($connection, $element_id, $type)
 
     return ($result->num_rows > 0) ? $result->fetch_assoc() : false;
 }
-$data = data_fetcher($connection, 2, 'task');
+$data = data_fetcher($connection, 2, 'teams');
 print_r($data);
 echo ("Esto es mi rol: " . $data['job_user']);
