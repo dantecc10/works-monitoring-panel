@@ -26,15 +26,21 @@ function data_fetcher($connection, $element_id, $type)
 {
     switch ($type) {
         case 'team':
-            $query = "SELECT `t`.*, 
-                CASE 
-                    WHEN `t`.`work_area_team` = 1 THEN 'Eléctrico'
-                    WHEN `t`.`work_area_team` = 2 THEN 'Plomería'
-                    WHEN `t`.`work_area_team` = 3 THEN 'Civil'
-                    ELSE 'Área Desconocida'
-                END AS `team_area`
-                FROM `teams` `t`
-                WHERE `t`.`id_team` = ?";
+            $query = "SELECT 
+                            `t`.*, 
+                            CASE 
+                                WHEN `t`.`work_area_team` = 1 THEN 'Eléctrico'
+                                WHEN `t`.`work_area_team` = 2 THEN 'Plomería'
+                                WHEN `t`.`work_area_team` = 3 THEN 'Civil'
+                                ELSE 'Área Desconocida'
+                            END AS `team_area`,
+                            CONCAT(u.name_user, ' ', u.last_names_user) AS leader_team
+                        FROM 
+                            `teams` `t`
+                        JOIN 
+                            `users` `u` ON `t`.`id_user_team` = `u`.`id_user`
+                        WHERE 
+                            `t`.`id_team` = ?;";
             break;
         case 'value':
             $query = ""; // Lógica para 'value'
@@ -69,6 +75,6 @@ function data_fetcher($connection, $element_id, $type)
 
     return ($result->num_rows > 0) ? $result->fetch_assoc() : false;
 }
-$data = data_fetcher($connection, 1, 'user');
+$data = data_fetcher($connection, 1, 'team');
 print_r($data);
 echo ("Esto es mi rol: " . $data['job_user']);
