@@ -56,7 +56,7 @@ function data_fetcher($connection, $element_id, $type)
                             `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
                         WHERE `t`.`id_project_task` = ? ORDER BY 
                             `tm`.`id_team` ASC;";
-
+            break;
         default:
             return false;
     }
