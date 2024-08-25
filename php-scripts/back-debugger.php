@@ -5,6 +5,7 @@ echo ($connection->connect_error) ? ("Connection failed: " . $connection->connec
 
 function data_fetcher($connection, $element_id, $type)
 {
+    $only_row = true;
     switch ($type) {
         case 'team':
             $query = "SELECT 
@@ -56,6 +57,7 @@ function data_fetcher($connection, $element_id, $type)
                             `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
                         WHERE `t`.`id_project_task` = ? ORDER BY 
                             `tm`.`id_team` ASC;";
+            $only_row = false;
             break;
         default:
             return false;
@@ -65,6 +67,14 @@ function data_fetcher($connection, $element_id, $type)
     $stmt->bind_param("i", $element_id);
     $stmt->execute();
     $result = $stmt->get_result();
+
+    if (!$only_row) {
+        $data = [];
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+        return $data;
+    }
 
     return ($result->num_rows > 0) ? $result->fetch_assoc() : false;
 }
