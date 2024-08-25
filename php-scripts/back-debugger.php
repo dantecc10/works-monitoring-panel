@@ -54,7 +54,7 @@ function data_fetcher($connection, $element_id, $type)
                         FROM `tasks` `t`
                         JOIN 
                             `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
-                        WHERE `t`.`id_project_task` = 2 ORDER BY 
+                        WHERE `t`.`id_project_task` = ? ORDER BY 
                             `tm`.`id_team` ASC;";
 
         default:
@@ -70,4 +70,4 @@ function data_fetcher($connection, $element_id, $type)
 }
 $data = data_fetcher($connection, 2, 'teams');
 print_r($data);
-echo ("Esto es mi rol: " . $data['job_user']);
+//echo ("Esto es mi rol: " . $data['job_user']);
