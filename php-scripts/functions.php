@@ -180,8 +180,8 @@ function detail_build_teams($project)
     include "configs.php";
     $teams_dom_output = "";
     $fields = extract_dom_fields($detailed_team_dom, "DATA_");
-    if ($teams != false) {
-        $teams_data = fetch_project_teams($connection, $project);
+    $teams_data = fetch_project_teams($connection, $project);
+    if ($teams_data != false) {
         for ($i = 0; $i < sizeof($teams_data); $i++) {
             $team = $teams_data[$i];
             $n = $i + 1;
