@@ -7,3 +7,6 @@ echo ($connection->connect_error) ? ("Connection failed: " . $connection->connec
 //echo ("Esto es mi rol: " . $data['job_user']);
 
 print_r(fetch_project_teams($connection, 2));
+
+echo "<br>";
+print_r(fetch_project_teams($connection, 2)[2]['team_name']);
