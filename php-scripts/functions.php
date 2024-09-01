@@ -160,12 +160,13 @@ function extract_dom_fields($text, $general_prefix)
     if (!str_contains($text, $general_prefix)) {
         return false;
     }
-    $pos = stripos($text, $general_prefix);
+    $pos = 0;
     for ($i = 0; $i < substr_count($text, $general_prefix); $i++) {
         $pos = stripos($text, $general_prefix, $pos);
         $field = "";
         for ($j = $pos; ($text[$j] != " " && $text[$j] != ">" && $text[$j] != '"'); $j++) {
             $field .= $text[$j];
+            $pos = $j;
         }
         $fields[] = get_requested_data_field($field, $general_prefix, false);
     }
