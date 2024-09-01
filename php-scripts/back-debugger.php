@@ -9,4 +9,4 @@ echo ($connection->connect_error) ? ("Connection failed: " . $connection->connec
 print_r(fetch_project_teams($connection, 2));
 
 echo "<br>";
-print_r(fetch_project_teams($connection, 2)[2]['team_name']);
+print_r(fetch_project_teams($connection, 2)[2]['company_team']);
