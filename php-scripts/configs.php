@@ -76,90 +76,7 @@ $detail_teams_dom = '
                 <div class="row">
                     <div class="col">
                         <div class="accordion" role="tablist" id="accordion-3">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-1" aria-expanded="false" aria-controls="accordion-3 .item-1">DATA_COMPANY_TEAM</button></h2>
-                                <div class="accordion-collapse collapse item-1 bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col col-12 align-self-center px-1">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
-                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
-                                                            <li>Área: DATA_WORK_AREA_TEAM</li>
-                                                            <li>Teléfono: <a href="tel:DATA_PHONE_NUMBER" target="_blank">DATA_PHONE_TEAM</a></li>
-                                                            <li>Móvil: <a href="https://wa.me/52DATA_MOBILE_NUMBER">DATA_MOBILE_TEAM</a></li>
-                                                            <li>Compañía: DATA_COMPANY_TEAM</li>
-                                                            <li>Domicilio: DATA_ADDRESS_TEAM</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="DATA_ICON_TEAM" height=""></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-2" aria-expanded="false" aria-controls="accordion-3 .item-2">DATA_COMPANY_TEAM</button></h2>
-                                <div class="accordion-collapse collapse item-2 bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col col-12 align-self-center px-1">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
-                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
-                                                            <li>Área: DATA_WORK_AREA_TEAM</li>
-                                                            <li>Teléfono: <a href="tel:DATA_PHONE_NUMBER" target="_blank">DATA_PHONE_TEAM</a></li>
-                                                            <li>Móvil: <a href="https://wa.me/52DATA_MOBILE_NUMBER">DATA_MOBILE_TEAM</a></li>
-                                                            <li>Compañía: DATA_COMPANY_TEAM</li>
-                                                            <li>Domicilio: DATA_ADDRESS_TEAM</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="DATA_ICON_TEAM" height=""></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-3" aria-expanded="true" aria-controls="accordion-3 .item-3">DATA_COMPANY_TEAM</button></h2>
-                                <div class="accordion-collapse collapse show item-3 bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col col-12 align-self-center px-1">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
-                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
-                                                            <li>Área: DATA_WORK_AREA_TEAM</li>
-                                                            <li>Teléfono: <a href="tel:DATA_PHONE_NUMBER" target="_blank">DATA_PHONE_TEAM</a></li>
-                                                            <li>Móvil: <a href="https://wa.me/52DATA_MOBILE_NUMBER">DATA_MOBILE_TEAM</a></li>
-                                                            <li>Compañía: DATA_COMPANY_TEAM</li>
-                                                            <li>Domicilio: DATA_ADDRESS_TEAM</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="DATA_ICON_TEAM" height=""></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- DATABASE + DOM info -->
                         </div>
                     </div>
                 </div>
@@ -168,3 +85,32 @@ $detail_teams_dom = '
     </div>
 </section>
 ';
+
+$detailed_team_dom = '<div class="accordion-item">
+                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-n" aria-expanded="false" aria-controls="accordion-3 .item-n">DATA_COMPANY_TEAM</button></h2>
+                                <div class="accordion-collapse collapse item-n bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col col-12 align-self-center px-1">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
+                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
+                                                            <li>Área: DATA_WORK_AREA_TEAM</li>
+                                                            <li>Teléfono: <a href="tel:DATA_PHONE_NUMBER" target="_blank">DATA_PHONE_TEAM</a></li>
+                                                            <li>Móvil: <a href="https://wa.me/52DATA_MOBILE_NUMBER">DATA_MOBILE_TEAM</a></li>
+                                                            <li>Compañía: DATA_COMPANY_TEAM</li>
+                                                            <li>Domicilio: DATA_ADDRESS_TEAM</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="DATA_ICON_TEAM" height=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>';

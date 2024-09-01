@@ -172,3 +172,21 @@ function extract_dom_fields($text, $general_prefix)
     }
     return $fields;
 }
+
+function detail_build_teams($project)
+{
+    include_once "connection.php";
+    include_once "configs.php";
+    $teams_dom_output = "";
+    if ($teams != false) {
+        $teams_data = fetch_project_teams($connection, $project);
+        for ($i = 0; $i < sizeof($teams_data); $i++) {
+            $team = $teams_data[$i];
+            $n = $i + 1;
+
+            
+        }
+    } else {
+        return "<p class='text-center fw-bold w-100'>No hay equipos registrados.</p>";
+    }
+}
