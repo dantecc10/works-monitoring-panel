@@ -167,7 +167,7 @@ function extract_dom_fields($text, $general_prefix)
         for ($j = $pos + strlen($general_prefix); ($text[$j] != " " && $text[$j] != ">" && $text[$j] != '"'); $j++) {
             $field .= $text[$j];
         }
-        $fields[] = $field;
+        $fields[] = get_requested_data_field($field, $general_prefix, false);
     }
     return $fields;
 }
