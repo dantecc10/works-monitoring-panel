@@ -161,7 +161,8 @@ function extract_dom_fields($text, $general_prefix)
         return false;
     }
     $pos = 0;
-    for ($i = 0; $i < substr_count($text, $general_prefix); $i++) {
+    $count = substr_count($text, $general_prefix);
+    for ($i = 0; $i < $count; $i++) {
         $pos = stripos($text, $general_prefix, $pos);
         $field = "";
         for ($j = $pos; ($text[$j] != " " && $text[$j] != ">" && $text[$j] != '"'); $j++) {
@@ -184,7 +185,7 @@ function detail_build_teams($project)
             $team = $teams_data[$i];
             $n = $i + 1;
 
-            
+
         }
     } else {
         return "<p class='text-center fw-bold w-100'>No hay equipos registrados.</p>";
