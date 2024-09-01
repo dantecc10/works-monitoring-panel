@@ -153,3 +153,21 @@ function get_requested_data_field($param, $prefix, $capitalized = false)
     }
     return false;
 }
+
+function extract_dom_fields($text, $general_prefix)
+{
+    $fields = [];
+    if (!str_contains($text, $general_prefix)) {
+        return false;
+    }
+    $pos = stripos($text, $general_prefix);
+    for ($i = 0; $i < substr_count($text, $general_prefix); $i++) {
+        $pos = stripos($text, $general_prefix, $pos + 1);
+        $field = "";
+        for ($j = $pos + strlen($general_prefix); ($text[$j] != " " && $text[$j] != ">" && $text[$j] != '"'); $j++) {
+            $field .= $text[$j];
+        }
+        $fields[] = $field;
+    }
+    return $fields;
+}
