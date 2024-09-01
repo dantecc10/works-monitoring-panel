@@ -187,7 +187,10 @@ function detail_build_teams($project)
             $n = $i + 1;
             $temp_field = ("DATA_" . strtoupper($fields[$i]));
             $team_dom = str_replace("item-n", "item-$n", $detailed_team_dom);
-            $team_dom = str_replace("$temp_field", $team[$fields[$i]], $team_dom, 1);
+            for ($k = 0; $k < sizeof($fields); $k++) {
+                substr_replace($team_dom, $team[$fields[$k]], strpos($team_dom, $temp_field), strlen($temp_field));
+            }
+
             $teams_dom_output .= $team_dom;
         }
         return str_replace("INSERT_TEAMS_DOM", $teams_dom_output, $detail_teams_dom);
