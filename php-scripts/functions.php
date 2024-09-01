@@ -134,6 +134,7 @@ function data_fetcher($connection, $element_id, $type)
 function fetch_project_teams($connection, $project_id)
 {
     $teams_quantity = data_fetcher($connection, $project_id, "project-teams");
+    /*
     if ($teams_quantity != false) {
         for ($i = 0; $i < sizeof($teams_quantity); $i++) {
             $team = data_fetcher($connection, $teams_quantity[$i]['id_team_task'], "team");
@@ -141,5 +142,6 @@ function fetch_project_teams($connection, $project_id)
         }
         return $teams;
     }
-    return false;
+    */
+    return $teams_quantity;
 }
