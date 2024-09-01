@@ -176,8 +176,8 @@ function extract_dom_fields($text, $general_prefix)
 
 function detail_build_teams($project)
 {
-    include_once "connection.php";
-    include_once "configs.php";
+    include "connection.php";
+    include "configs.php";
     $teams_dom_output = "";
     $fields = extract_dom_fields($detailed_team_dom, "DATA_");
     if ($teams != false) {
