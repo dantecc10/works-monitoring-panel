@@ -15,4 +15,4 @@ echo ("<br>");
 #    echo "<br>";
 #}
 echo (sizeof(extract_dom_fields($detail_teams_dom, "DATA_")) . "<br>");
-print_r(extract_dom_fields($detail_teams_dom, "DATA_"));
+print_r(extract_dom_fields($detail_teams_dom, "DATA_")[4]);
