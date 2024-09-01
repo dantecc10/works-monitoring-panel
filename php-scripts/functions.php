@@ -144,3 +144,12 @@ function fetch_project_teams($connection, $project_id)
     }
     return false;
 }
+
+function get_requested_data_field($param, $prefix, $capitalized = false)
+{
+    if (str_contains($param, $prefix)) {
+        $field = str_replace($prefix, "", $param);
+        return ($capitalized) ? $field : strtolower($field);
+    }
+    return false;
+}

@@ -6,7 +6,4 @@ echo ($connection->connect_error) ? ("Connection failed: " . $connection->connec
 #print_r($data);
 //echo ("Esto es mi rol: " . $data['job_user']);
 
-print_r(fetch_project_teams($connection, 2));
-
-echo "<br>";
-print_r(fetch_project_teams($connection, 2)[2]['company_team']);
+echo get_requested_data_field("DATA_USER_NAME", 'DATA_', false);
