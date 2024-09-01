@@ -77,6 +77,7 @@ $detail_teams_dom = '
                     <div class="col">
                         <div class="accordion" role="tablist" id="accordion-3">
                             <!-- DATABASE + DOM info -->
+                            INSERT_TEAMS_DOM
                         </div>
                     </div>
                 </div>

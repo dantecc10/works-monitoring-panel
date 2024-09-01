@@ -179,14 +179,18 @@ function detail_build_teams($project)
     include_once "connection.php";
     include_once "configs.php";
     $teams_dom_output = "";
+    $fields = extract_dom_fields($detailed_team_dom, "DATA_");
     if ($teams != false) {
         $teams_data = fetch_project_teams($connection, $project);
         for ($i = 0; $i < sizeof($teams_data); $i++) {
             $team = $teams_data[$i];
             $n = $i + 1;
-
-
+            $temp_field = ("DATA_" . strtoupper($fields[$i]));
+            $team_dom = preg_replace("/$temp_field/", $team[$fields[$i]], $detailed_team_dom, 1);
+            $team_dom = str_replace("item-n", "item-$n", $team_dom);
+            $teams_dom_output .= $team_dom;;
         }
+        return str_replace("INSERT_TEAMS_DOM", $teams_dom_output, $detail_teams_dom);
     } else {
         return "<p class='text-center fw-bold w-100'>No hay equipos registrados.</p>";
     }
