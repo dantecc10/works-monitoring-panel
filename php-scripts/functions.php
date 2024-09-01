@@ -134,10 +134,12 @@ function data_fetcher($connection, $element_id, $type)
 function fetch_project_teams($connection, $project_id)
 {
     $teams = data_fetcher($connection, $project_id, "project-teams");
-    $teams_data = [];
-    foreach ($teams as $team) {
-        $team_data = data_fetcher($connection, $team['id_team'], "team");
-        $teams_data[] = $team_data;
+    if ($teams != false) {
+        for ($i = 0; $i < sizeof($teams); $i++) {
+            $team = data_fetcher($connection, $teams[$i]['id_team_task'], "team");
+            $teams[$i] = $team;
+        }
+        return $teams;
     }
-    return $teams_data;
+    return false;
 }
