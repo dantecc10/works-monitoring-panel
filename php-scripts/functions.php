@@ -162,9 +162,9 @@ function extract_dom_fields($text, $general_prefix)
     }
     $pos = stripos($text, $general_prefix);
     for ($i = 0; $i < substr_count($text, $general_prefix); $i++) {
-        $pos = stripos($text, $general_prefix, $pos + 1);
+        $pos = stripos($text, $general_prefix, $pos);
         $field = "";
-        for ($j = $pos + strlen($general_prefix); ($text[$j] != " " && $text[$j] != ">" && $text[$j] != '"'); $j++) {
+        for ($j = $pos; ($text[$j] != " " && $text[$j] != ">" && $text[$j] != '"'); $j++) {
             $field .= $text[$j];
         }
         $fields[] = get_requested_data_field($field, $general_prefix, false);
