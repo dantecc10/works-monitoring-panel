@@ -141,5 +141,3 @@ function fetch_project_teams($connection, $project_id)
     }
     return $teams_data;
 }
-
-print_r(fetch_project_teams($connection, 2));
