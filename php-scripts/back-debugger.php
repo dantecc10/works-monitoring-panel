@@ -9,10 +9,10 @@ echo ($connection->connect_error) ? ("Connection failed: " . $connection->connec
 
 //echo get_requested_data_field("DATA_USER_NAME", 'DATA_', false);
 
-echo("<br>");
+echo ("<br>");
 #for ($i = 0; $i < sizeof(extract_dom_fields($detail_teams_dom, "DATA_")); $i++) {
 #    echo extract_dom_fields($detail_teams_dom, "DATA_")[$i];
 #    echo "<br>";
 #}
-
+echo (sizeof(extract_dom_fields($detail_teams_dom, "DATA_")) . "<br>");
 print_r(extract_dom_fields($detail_teams_dom, "DATA_"));
