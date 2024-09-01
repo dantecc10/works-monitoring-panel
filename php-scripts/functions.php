@@ -103,12 +103,9 @@ function data_fetcher($connection, $element_id, $type)
                             `t`.`id_task` = ?;"; // Lógica para 'task'
             break;
         case "teams":
-            $query = "SELECT DISTINCT `tm`.`id_team`
-                        FROM `tasks` `t`
-                        JOIN 
+            $query = "SELECT DISTINCT `tm`.`id_team` FROM `tasks` `t` JOIN 
                             `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
-                        WHERE `t`.`id_project_task` = ? ORDER BY 
-                            `tm`.`id_team` ASC;";
+                        WHERE `t`.`id_project_task` = ? ORDER BY `tm`.`id_team` ASC;";
             $only_row = false;
             break;
         case "project-teams":
@@ -133,3 +130,16 @@ function data_fetcher($connection, $element_id, $type)
 
     return ($result->num_rows > 0) ? $result->fetch_assoc() : false;
 }
+
+function fetch_project_teams($connection, $project_id)
+{
+    $teams = data_fetcher($connection, $project_id, "project-teams");
+    $teams_data = [];
+    foreach ($teams as $team) {
+        $team_data = data_fetcher($connection, $team['id_team'], "team");
+        $teams_data[] = $team_data;
+    }
+    return $teams_data;
+}
+
+print_r(fetch_project_teams($connection, 2));
