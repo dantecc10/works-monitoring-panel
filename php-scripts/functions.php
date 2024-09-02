@@ -116,6 +116,10 @@ function data_fetcher($connection, $element_id, $type)
             $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE `id_project_task` = ?;";
             $only_row = false;
             break;
+        case "task-imgs":
+            $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE `id_task` = ?;";
+            $only_row = false;
+            break;
         default:
             return false;
     }
@@ -203,11 +207,11 @@ function detail_build_teams($project)
     }
 }
 
-function get_imgs_array($project_id)
+function get_imgs_array($project_id, $task)
 {
     include "connection.php";
     $imgs_array = [];
-    $imgs = data_fetcher($connection, $project_id, "project-imgs");
+    $imgs = (isset($task)) ? data_fetcher($connection, $task, "task-imgs") : data_fetcher($connection, $project_id, "project-imgs");
     if ($imgs != false) {
         for ($i = 0; $i < sizeof($imgs); $i++) {
             if (str_contains($imgs[$i]['graphical_evidence_task'], ",")) {
