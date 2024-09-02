@@ -114,6 +114,7 @@ function data_fetcher($connection, $element_id, $type)
             break;
         case "project-imgs":
             $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE `id_project_task` = ?;";
+            $only_row = false;
             break;
         default:
             return false;
