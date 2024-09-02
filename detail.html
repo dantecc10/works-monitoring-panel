@@ -339,7 +339,15 @@
                                             <div class="col align-self-center text-center col-12 col-lg-6"><span class="fw-bold color-2">Comentarios</span>
                                                 <p class="align-self-center fw-bold">No hubo ningún percance o contratiempo.</p>
                                             </div>
-                                            <div class="col col-12 text-center rounded-4 bg-color-5"><span class="fw-bolder fs-4">Ver evidencia gráfica</span></div>
+                                            <div class="col col-12 text-center rounded-4 bg-color-5"><button class="btn fw-bolder fs-4" data-toggle="modal" data-target="#modal-graphical-evidence"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-photo-share">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M15 8h.01"></path>
+                                                        <path d="M12 21h-6a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v7"></path>
+                                                        <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                                                        <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0"></path>
+                                                        <path d="M16 22l5 -5"></path>
+                                                        <path d="M21 21.5v-4.5h-4.5"></path>
+                                                    </svg>&nbsp;Ver galería</button></div>
                                         </div>
                                         <div class="row rounded-4 mb-2" style="background-color: var(--color-6);">
                                             <div class="col align-self-center text-center col-12 bg-color-3 rounded-4"><span class="fs-4 fw-bolder text-black-50 color-2">Estudio de suelo</span>
@@ -372,7 +380,7 @@
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
-    <div class="modal fade modal-xl" role="dialog" tabindex="-1" id="modal-graphical-evidence">
+    <div class="modal fade modal-xl" role="dialog" tabindex="-1" id="modal-graphical-evidence" aria-labelledby="modal-graphical-evidence">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -383,10 +391,10 @@
                     <div class="row">
                         <div class="col" style="max-height: 52vh !important;">
                             <div class="carousel slide" data-bs-ride="false" id="carousel-2" style="max-height: inherit !important;">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
+                                <div class="carousel-inner" style="max-height: inherit;">
+                                    <div class="carousel-item active d-inline-flex justify-content-center" style="max-height: inherit;"><img class="w-100 d-block w-auto" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image" style="max-height: inherit;"></div>
+                                    <div class="carousel-item d-inline-flex justify-content-center" style="max-height: inherit;"><img class="w-100 d-block w-auto" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image" style="max-height: inherit;"></div>
+                                    <div class="carousel-item d-inline-flex justify-content-center" style="max-height: inherit;"><img class="w-100 d-block w-auto" src="assets/img/logo.png" alt="Slide Image" style="max-height: inherit;"></div>
                                 </div>
                                 <div>
                                     <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><!-- End: Previous -->
