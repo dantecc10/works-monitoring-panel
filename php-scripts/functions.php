@@ -120,6 +120,11 @@ function data_fetcher($connection, $element_id, $type)
             $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE `id_task` = ?;";
             $only_row = false;
             break;
+        case "project":
+            $query = "SELECT p.*, u.name_user, u.last_names_user, u.icon_user
+                        FROM projects p JOIN users u
+                        ON p.owner_project = u.id_user WHERE `id_project` = ?;";
+            break;
         default:
             return false;
     }

@@ -5,6 +5,8 @@
 include "php-scripts/connection.php";
 include "php-scripts/functions.php";
 include "php-scripts/configs.php";
+
+$project_data = data_fetcher($connection, $_GET['id'], "project");
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +15,7 @@ include "php-scripts/configs.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Detalle de obra - BM Design</title>
+    <title>Detalle de obra - <?php echo ($project_data['name_project']); ?> - BM Design</title>
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta name="description" content="Plataforma de administración de obras y construcción.">
     <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/logo-nuevo.png">
@@ -142,7 +144,7 @@ include "php-scripts/configs.php";
                 </nav>
                 <section>
                     <div class="container-fluid">
-                        <h3 class="text-dark mb-2 color-5 fw-bold fs-1 text-center">Construcción de Centro Comercial "3 Estrellas"</h3>
+                        <h3 class="text-dark mb-2 color-5 fw-bold fs-1 text-center"><?php echo ($project_data['name_project']); ?></h3>
                         <div class="card shadow mb-3">
                             <div class="card-header py-3 bg-color-3">
                                 <p class="text-primary m-0 fw-bold color-5 fs-5">Lea aquí los detalles de el proyecto.</p>
@@ -157,7 +159,7 @@ include "php-scripts/configs.php";
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="description-container fs-5" style="text-align: justify !important; text-indent: 5% !important;">El proyecto del Centro Comercial "3 Estrellas" busca traer nuevos productos y tiendas a los residentes de la Ciudad de 3 Estrellas, poniendo en un sitio todo lo que necesitan para mantener su estilo de vida.</p>
+                                                <p class="description-container fs-5" style="text-align: justify !important; text-indent: 5% !important;"><?php echo ($project_data['description_project']); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +217,7 @@ include "php-scripts/configs.php";
                 </section>
                 <!-- Dynamic Teams Displaying -->
                 <?php
-                    echo detail_build_teams($_GET['id']);
+                echo detail_build_teams($_GET['id']);
                 ?>
                 <section id="tasks">
                     <div class="container-fluid">
