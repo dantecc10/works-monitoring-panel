@@ -115,3 +115,32 @@ $detailed_team_dom = '<div class="accordion-item">
                                     </div>
                                 </div>
                             </div>';
+
+$detailed_flag_team_dom = '<div class="accordion-item">
+                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-n" aria-expanded="false" aria-controls="accordion-3 .item-n">DATA</button></h2>
+                                <div class="accordion-collapse collapse item-n bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col col-12 align-self-center px-1">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
+                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
+                                                            <li>Área: DATA</li>
+                                                            <li>Teléfono: <a href="tel:DATA" target="_blank">DATA</a></li>
+                                                            <li>Móvil: <a href="https://wa.me/52DATA">DATA</a></li>
+                                                            <li>Compañía: DATA</li>
+                                                            <li>Domicilio: DATA</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="DATA" height=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>';
