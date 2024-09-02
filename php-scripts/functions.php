@@ -205,6 +205,7 @@ function detail_build_teams($project)
 function get_imgs_array($project_id)
 {
     include "connection.php";
+    $imgs_array = [];
     $imgs = data_fetcher($connection, $project_id, "project-imgs");
     for ($i = 0; $i < sizeof($imgs); $i++) {
         if (str_contains($imgs[$i]['graphical_evidence_task'], ",")) {
