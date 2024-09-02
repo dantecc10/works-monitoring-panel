@@ -117,8 +117,8 @@ $detailed_team_dom = '<div class="accordion-item">
                             </div>';
 
 $detailed_flag_team_dom = '<div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-n" aria-expanded="false" aria-controls="accordion-3 .item-n">DATA</button></h2>
-                                <div class="accordion-collapse collapse item-n bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
+                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-DATA" aria-expanded="false" aria-controls="accordion-3 .item-n">DATA</button></h2>
+                                <div class="accordion-collapse collapse item-DATA bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
                                     <div class="accordion-body">
                                         <div class="row">
                                             <div class="col col-12 align-self-center px-1">
