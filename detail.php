@@ -174,7 +174,7 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-">Ing. Gerardo Pardo Obrador</p>
+                                                <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-"><?php echo ($project_data['name_user']); ?> <?php echo ($project_data['last_names_project']); ?></p>
                                             </div>
                                         </div>
                                     </div>
