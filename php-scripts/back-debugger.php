@@ -20,5 +20,8 @@ echo ("<br>");
 //echo detail_build_teams(2);
 
 //print_r(get_imgs_array(2));
-
-print_r(fetch_project_teams($connection, 2));
+$data = (fetch_project_teams($connection, 2));
+for($i = 0; $i < sizeof($data); $i++) {
+    print_r($data[$i]);
+    echo "<br>";
+}
