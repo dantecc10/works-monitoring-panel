@@ -23,5 +23,5 @@ echo ("<br>");
 $data = (fetch_project_teams($connection, 2));
 for($i = 0; $i < sizeof($data); $i++) {
     print_r($data[$i]);
-    echo "<br>";
+    echo "<br><br>";
 }
