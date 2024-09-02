@@ -197,7 +197,7 @@ function detail_build_teams($project)
             $temp_field = ("DATA_" . strtoupper($fields[$i])); // Marca con nomenclatura a reemplazar con datos reales
             $pos = strpos($team_dom, $temp_field); // Posición de la marca en el DOM
             $team_dom = substr_replace($team_dom, $team[$fields[$i]], $pos, strlen($temp_field));
-
+            echo ("<br>TempField: " . $temp_field . "<br>TempData: " . $team[$fields[$i]] . "<br>");
             $teams_dom_output .= $team_dom;
         }
         return str_replace("INSERT_TEAMS_DOM", $teams_dom_output, $detail_teams_dom);
