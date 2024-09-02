@@ -214,5 +214,5 @@ function get_imgs_array($project_id)
         }
     }
     
-    return $imgs;
+    return $imgs_array;
 }
