@@ -17,13 +17,11 @@ echo ("<br>");
 //echo (sizeof(extract_dom_fields($detailed_team_dom, "DATA_")) . "<br>");
 //print_r(extract_dom_fields($detailed_team_dom, "DATA_"));
 
-//echo detail_build_teams(2);
+echo detail_build_teams(2);
 
 //print_r(get_imgs_array(2));
-$data = (fetch_project_teams($connection, 2));
-for ($i = 0; $i < sizeof($data); $i++) {
-    print_r($data[$i]);
-    echo "<br><br>";
-}
-
-
+//$data = (fetch_project_teams($connection, 2));
+//for ($i = 0; $i < sizeof($data); $i++) {
+//    print_r($data[$i]);
+//    echo "<br><br>";
+//}
