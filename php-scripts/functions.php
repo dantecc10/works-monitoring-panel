@@ -210,7 +210,7 @@ function detail_build_teams($project)
                 $n
             ];
 
-            $team_dom = flag_replacer($detailed_flag_team_dom, "FLAG", $replacing_data, $fields_order);
+            $team_dom = flag_replacer($detailed_flag_team_dom, "DATA", $replacing_data, $fields_order);
 
             $teams_dom_output .= $team_dom;
         }
