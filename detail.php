@@ -1,3 +1,12 @@
+<?php
+//if(!isset($_GET['id']) || !isset($_SESSION['id_user'])){
+//    header("Location: login.php");
+//} else{}
+include "php-scripts/connection.php";
+include "php-scripts/functions.php";
+include "php-scripts/configs.php";
+?>
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="es-mx">
 
@@ -204,112 +213,10 @@
                         </div>
                     </div>
                 </section>
-                <section id="teams">
-                    <div class="container-fluid">
-                        <div class="card shadow mb-3">
-                            <div class="card-header py-3 bg-color-3">
-                                <p class="text-primary m-0 fw-bold color-5 fs-5">Equipos</p>
-                            </div>
-                            <div class="card-body bg-color-2">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="fs-5 mb-2" style="text-align: justify !important; text-indent: 5% !important;">Mira los equipos que están trabajando en esta obra.</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="accordion" role="tablist" id="accordion-3">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" role="tab"><button class="accordion-button bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-1" aria-expanded="true" aria-controls="accordion-3 .item-1">Servicios de Plomería A. C.</button></h2>
-                                                <div class="accordion-collapse collapse show item-1 bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                                    <div class="accordion-body">
-                                                        <div class="row">
-                                                            <div class="col col-12 align-self-center px-1">
-                                                                <div class="row">
-                                                                    <div class="col">
-                                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
-                                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
-                                                                            <li>Área: Plomería</li>
-                                                                            <li>Teléfono: <a href="tel:7979773095" target="_blank">7979773095</a></li>
-                                                                            <li>Móvil: <a href="https://wa.me/527979773095">7979773095</a></li>
-                                                                            <li>Compañía: Servicios de Plomería A. C.</li>
-                                                                            <li>Domicilio: Calle 14 Norte, Puebla.</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="https://plomeroirapuato.com/wp-content/uploads/2022/12/Logo-Plomero-Irapuato.png" height=""></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-2" aria-expanded="false" aria-controls="accordion-3 .item-2">Ingeniería Civil "Smart Building"</button></h2>
-                                                <div class="accordion-collapse collapse item-2 bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                                    <div class="accordion-body">
-                                                        <div class="row">
-                                                            <div class="col col-12 align-self-center px-1">
-                                                                <div class="row">
-                                                                    <div class="col">
-                                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
-                                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
-                                                                            <li>Área: Plomería</li>
-                                                                            <li>Teléfono: <a href="tel:7979773095" target="_blank">7979773095</a></li>
-                                                                            <li>Móvil: <a href="https://wa.me/527979773095">7979773095</a></li>
-                                                                            <li>Compañía: Servicios de Plomería A. C.</li>
-                                                                            <li>Domicilio: Calle 14 Norte, Puebla.</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="https://plomeroirapuato.com/wp-content/uploads/2022/12/Logo-Plomero-Irapuato.png" height=""></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-3" aria-expanded="false" aria-controls="accordion-3 .item-3">Servicios Eléctricos "Volta"</button></h2>
-                                                <div class="accordion-collapse collapse item-3 bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                                    <div class="accordion-body">
-                                                        <div class="row">
-                                                            <div class="col col-12 align-self-center px-1">
-                                                                <div class="row">
-                                                                    <div class="col">
-                                                                        <p class="text-primary m-0 fw-bold d-flex align-middle col col-12 text-center justify-content-center color-6 fs-4">Datos sobre el equipo</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col align-self-center col-12 col-md-7 col-lg-8">
-                                                                        <ul class="align-self-center ps-3 ps-lg-5 text-md-center">
-                                                                            <li>Área: Plomería</li>
-                                                                            <li>Teléfono: <a href="tel:7979773095" target="_blank">7979773095</a></li>
-                                                                            <li>Móvil: <a href="https://wa.me/527979773095">7979773095</a></li>
-                                                                            <li>Compañía: Servicios de Plomería A. C.</li>
-                                                                            <li>Domicilio: Calle 14 Norte, Puebla.</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col text-center align-self-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="https://plomeroirapuato.com/wp-content/uploads/2022/12/Logo-Plomero-Irapuato.png" height=""></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <!-- Dynamic Teams Displaying -->
+                <?php
+                    detail_build_teams($_GET['id']);
+                ?>
                 <section id="tasks">
                     <div class="container-fluid">
                         <div class="card shadow mb-3">
