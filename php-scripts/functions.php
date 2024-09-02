@@ -200,7 +200,8 @@ function detail_build_teams($project)
             echo ("<br>TempField: " . $temp_field . "<br>TempData: " . $team[$fields[$i]] . "<br>");
             $teams_dom_output .= $team_dom;
         }
-        return str_replace("INSERT_TEAMS_DOM", $teams_dom_output, $detail_teams_dom);
+        $teams_dom_output = str_replace("INSERT_TEAMS_DOM", $teams_dom_output, $detail_teams_dom);
+        return $teams_dom_output;
     } else {
         return "<p class='text-center fw-bold w-100'>No hay equipos registrados.</p>";
     }
