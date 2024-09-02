@@ -191,12 +191,13 @@ function detail_build_teams($project)
     $teams_data = fetch_project_teams($connection, $project);
     if ($teams_data != false) {
         for ($i = 0; $i < sizeof($teams_data); $i++) {
-            $team = $teams_data[$i];
-            $n = $i + 1;
-            $temp_field = ("DATA_" . strtoupper($fields[$i]));
-            $team_dom = str_replace("item-n", "item-$n", $detailed_team_dom);
-            for ($k = 0; $k < sizeof($fields); $k++) {
-                $team_dom = substr_replace($team_dom, $team[$fields[$k]], strpos($team_dom, $temp_field), strlen($temp_field));
+            $team_dom = $detailed_team_dom; // DOM de equipo
+            $team = $teams_data[$i]; // Datos del equipo en cuestión
+            $n = $i + 1; // Número de equipo desde el 1 para Bootstrap
+            $temp_field = ("DATA_" . strtoupper($fields[$i])); // Marca con nomenclatura a reemplazar con datos reales
+            $pos = strpos($team_dom, $temp_field); // Posición de la marca en el DOM
+            if ($pos !== false) {
+                $team_dom = substr_replace($team_dom, $team[$fields[$i]], $pos, strlen($temp_field));
             }
 
             $teams_dom_output .= $team_dom;
