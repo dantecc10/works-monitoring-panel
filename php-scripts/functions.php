@@ -208,6 +208,11 @@ function get_imgs_array($project_id)
     include "connection.php";
     $imgs_array = [];
     $imgs = data_fetcher($connection, $project_id, "project-imgs");
+    if ($imgs != false) {
+        for ($i = 0; $i < sizeof($imgs); $i++) {
+            $imgs_array[] = $imgs[$i]['graphical_evidence_task'];
+        }
+    }
     
     return $imgs;
 }
