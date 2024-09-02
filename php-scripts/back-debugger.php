@@ -21,7 +21,9 @@ echo ("<br>");
 
 //print_r(get_imgs_array(2));
 $data = (fetch_project_teams($connection, 2));
-for($i = 0; $i < sizeof($data); $i++) {
+for ($i = 0; $i < sizeof($data); $i++) {
     print_r($data[$i]);
     echo "<br><br>";
 }
+
+

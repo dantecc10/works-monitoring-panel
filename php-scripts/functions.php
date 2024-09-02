@@ -191,13 +191,27 @@ function detail_build_teams($project)
     $teams_data = fetch_project_teams($connection, $project);
     if ($teams_data != false) {
         for ($i = 0; $i < sizeof($teams_data); $i++) {
-            $team_dom = $detailed_team_dom; // DOM de equipo
             $team = $teams_data[$i]; // Datos del equipo en cuestión
             $n = $i + 1; // Número de equipo desde el 1 para Bootstrap
-            $temp_field = ("DATA_" . strtoupper($fields[$i])); // Marca con nomenclatura a reemplazar con datos reales
-            $pos = strpos($team_dom, $temp_field); // Posición de la marca en el DOM
-            $team_dom = substr_replace($team_dom, $team[$fields[$i]], $pos, strlen($temp_field));
-            echo ("<br>TempField: " . $temp_field . "<br>TempData: " . $team[$fields[$i]] . "<br>");
+
+            $fields_order = [10, 6, 10, 8, 4, 4, 5, 5, 6, 7, 2];
+
+            $replacing_data = [
+                $team['id_team'],
+                $team['id_user_team'],
+                $team['icon_team'],
+                $team['work_area_team'],
+                $team['phone_team'],
+                $team['mobile_team'],
+                $team['company_team'],
+                $team['address_team'],
+                $team['team_area'],
+                $team['leader_team'],
+                $n
+            ];
+
+            $team_dom = flag_replacer($detailed_team_dom, "FLAG", $replacing_data, $fields_order);
+
             $teams_dom_output .= $team_dom;
         }
         $teams_dom_output = str_replace("INSERT_TEAMS_DOM", $teams_dom_output, $detail_teams_dom);
