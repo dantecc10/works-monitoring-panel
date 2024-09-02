@@ -207,15 +207,6 @@ function get_imgs_array($project_id)
     include "connection.php";
     $imgs_array = [];
     $imgs = data_fetcher($connection, $project_id, "project-imgs");
-    for ($i = 0; $i < sizeof($imgs); $i++) {
-        if (str_contains($imgs[$i]['graphical_evidence_task'], ",")) {
-            $temp_array =  (explode(",", $imgs[$i]['graphical_evidence_task']));
-            for ($j = 0; $j < sizeof($temp_array); $j++) {
-                array_push($imgs_array, $temp_array[$j]);
-            }
-        } else {
-            array_push($imgs_array, $imgs[$i]['graphical_evidence_task']);
-        }
-    }
-    return $imgs_array;
+    
+    return $imgs;
 }
