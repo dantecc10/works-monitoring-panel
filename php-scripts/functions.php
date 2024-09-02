@@ -196,9 +196,7 @@ function detail_build_teams($project)
             $n = $i + 1; // Número de equipo desde el 1 para Bootstrap
             $temp_field = ("DATA_" . strtoupper($fields[$i])); // Marca con nomenclatura a reemplazar con datos reales
             $pos = strpos($team_dom, $temp_field); // Posición de la marca en el DOM
-            if ($pos !== false) {
-                $team_dom = substr_replace($team_dom, $team[$fields[$i]], $pos, strlen($temp_field));
-            }
+            $team_dom = substr_replace($team_dom, $team[$fields[$i]], $pos, strlen($temp_field));
 
             $teams_dom_output .= $team_dom;
         }
