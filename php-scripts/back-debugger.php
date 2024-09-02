@@ -17,4 +17,6 @@ echo ("<br>");
 //echo (sizeof(extract_dom_fields($detailed_team_dom, "DATA_")) . "<br>");
 //print_r(extract_dom_fields($detailed_team_dom, "DATA_"));
 
-echo detail_build_teams(2);
+//echo detail_build_teams(2);
+
+print_r(get_imgs_array(2));

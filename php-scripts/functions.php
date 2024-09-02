@@ -112,6 +112,9 @@ function data_fetcher($connection, $element_id, $type)
             $query = "SELECT DISTINCT `id_team_task` FROM `tasks` WHERE (`id_project_task` = ?);";
             $only_row = false;
             break;
+        case "project-imgs":
+            $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE `id_project_task` = ?;";
+            break;
         default:
             return false;
     }
@@ -197,4 +200,18 @@ function detail_build_teams($project)
     } else {
         return "<p class='text-center fw-bold w-100'>No hay equipos registrados.</p>";
     }
+}
+
+function get_imgs_array($project_id)
+{
+    include "connection.php";
+    $imgs = data_fetcher($connection, $project_id, "project-imgs");
+    for ($i = 0; $i < sizeof($imgs); $i++) {
+        if (str_contains($imgs[$i]['graphical_evidence_task'], ",")) {
+            array_push($imgs_array, explode(",", $imgs[$i]['graphical_evidence_task']));
+        } else {
+            array_push($imgs_array, $imgs[$i]['graphical_evidence_task']);
+        }
+    }
+    return $imgs_array;
 }
