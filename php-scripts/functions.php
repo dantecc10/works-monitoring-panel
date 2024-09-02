@@ -210,9 +210,16 @@ function get_imgs_array($project_id)
     $imgs = data_fetcher($connection, $project_id, "project-imgs");
     if ($imgs != false) {
         for ($i = 0; $i < sizeof($imgs); $i++) {
-            $imgs_array[] = $imgs[$i]['graphical_evidence_task'];
+            if (str_contains($imgs[$i]['graphical_evidence_task'], ",")) {
+                $temp_array = explode(",", $imgs[$i]['graphical_evidence_task']);
+                for ($j = 0; $j < sizeof($temp_array); $j++) {
+                    $imgs_array[] = $temp_array[$j];
+                }
+            } else {
+                $imgs_array[] = $imgs[$i]['graphical_evidence_task'];
+            }
         }
     }
-    
+
     return $imgs_array;
 }
