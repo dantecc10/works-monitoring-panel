@@ -215,7 +215,7 @@ include "php-scripts/configs.php";
                 </section>
                 <!-- Dynamic Teams Displaying -->
                 <?php
-                    detail_build_teams($_GET['id']);
+                    echo detail_build_teams($_GET['id']);
                 ?>
                 <section id="tasks">
                     <div class="container-fluid">
