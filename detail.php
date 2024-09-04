@@ -13,12 +13,12 @@ $js_imgs_array = "<script lang='javascript'>const imgs = [";
 for ($i = 0; $i < sizeof($imgs); $i++) {
     $js_imgs_array .= "[";
     if (str_contains($imgs[$i]['graphical_evidence'], ",")) {
-        $temp_imgs = explode(",", $imgs[$i]);
+        $temp_imgs = explode(",", $imgs[$i]['graphical_evidence']);
         for ($j = 0; $j < sizeof($temp_imgs); $j++) {
             $js_imgs_array .= ($j == (sizeof($temp_imgs) - 1)) ? ("'" . $temp_imgs[$j] . "', ") : ("'" . $temp_imgs[$j] . "']");
         }
     } else {
-        $js_imgs_array .= "['" . $imgs[$i] . "']";
+        $js_imgs_array .= "['" . $imgs[$i]['graphical_evidence'] . "']";
     }
 }
 $js_imgs_array .= "];</script>";
