@@ -19,7 +19,7 @@ for ($i = 0; $i < sizeof($imgs); $i++) {
     if (str_contains($imgs[$i]['graphical_evidence_task'], ",")) {
         $temp_imgs = explode(",", $imgs[$i]['graphical_evidence_task']);
         for ($j = 0; $j < sizeof($temp_imgs); $j++) {
-            $js_imgs_array .= ($j == (sizeof($temp_imgs) - 1)) ? ("'" . $temp_imgs[$j] . "', ") : ("'" . $temp_imgs[$j] . "']");
+            $js_imgs_array .= ($j == (sizeof($temp_imgs) - 1)) ? ("['" . $temp_imgs[$j] . "'], ") : ("['" . $temp_imgs[$j] . "']");
         }
     } else {
         $js_imgs_array .= "['" . $imgs[$i]['graphical_evidence_task'] . "']";
