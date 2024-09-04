@@ -9,10 +9,6 @@ include "php-scripts/configs.php";
 $project_data = data_fetcher($connection, $_GET['id'], "project");
 $imgs = data_fetcher($connection, $_GET['id'], "task-project-imgs");
 
-echo ("<br>");
-print_r($imgs);
-echo ("<br>");
-
 $js_imgs_array = "<script lang='javascript'>const imgs = [";
 for ($i = 0; $i < sizeof($imgs); $i++) {
     $js_imgs_array .= "[";
