@@ -277,6 +277,7 @@ $js_imgs_array .= "];</script>";
                                                 }
                                             }
 
+                                            build_main_carousel(imgs);
                                         </script>
                                     </div>
                                 </div>
