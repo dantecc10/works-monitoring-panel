@@ -276,8 +276,6 @@ $js_imgs_array .= "];</script>";
                                                     }
                                                 }
                                             }
-
-                                            build_main_carousel(imgs);
                                         </script>
                                     </div>
                                 </div>
@@ -338,6 +336,9 @@ $js_imgs_array .= "];</script>";
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/wap.js"></script>
+    <script lang="javascript">
+        build_main_carousel(imgs);
+    </script>
 </body>
 
 </html>
