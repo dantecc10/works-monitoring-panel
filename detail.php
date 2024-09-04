@@ -228,6 +228,40 @@ $js_imgs_array .= "];</script>";
                                             </div>
                                             <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
                                         </div>
+                                        <script lang="javascript">
+                                            function build_main_carousel(images) {
+                                                let carousel = document.querySelector("#carousel-1");
+                                                let carousel_inner = carousel.querySelector(".carousel-inner");
+                                                let carousel_indicators = carousel.querySelector(".carousel-indicators");
+                                                let k = 0;
+                                                for (let i = 0; i < images.length; i++) {
+                                                    for (let j = 0; j < images[i].length; j++) {
+                                                        let carousel_item = document.createElement("div");
+                                                        let carousel_indicator = document.createElement("button");
+                                                        carousel_item.classList.add("carousel-item", "text-center");
+                                                        carousel_indicator.setAttribute("type", "button");
+                                                        carousel_indicator.setAttribute("data-bs-target", "#carousel-1");
+                                                        carousel_indicator.setAttribute("data-bs-slide-to", k);
+                                                        if (i === 0 && j === 0) {
+                                                            carousel_item.classList.add("active");
+                                                            carousel_indicator.classList.add("active");
+                                                        }
+
+                                                        carousel_item.style.maxHeight = "inherit !important";
+                                                        carousel_img = document.createElement("img");
+                                                        carousel_img.classList.add("w-100", "d-block");
+                                                        carousel_img.style.maxHeight = "inherit";
+                                                        carousel_img.style.width = "auto !important";
+                                                        carousel_img.style.display = "inline-flex !important";
+                                                        carousel_img.style.minHeight = "70vh";
+                                                        carousel_img.src = images[j];
+
+                                                        carousel_inner.appendChild(carousel_item);
+                                                        k++;
+                                                    }
+                                                }
+                                            }
+                                        </script>
                                     </div>
                                 </div>
                             </div>
