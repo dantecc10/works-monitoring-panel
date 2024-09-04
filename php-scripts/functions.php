@@ -246,3 +246,41 @@ function get_imgs_array($project_id, $task)
 
     return $imgs_array;
 }
+
+function detail_build_tasks($project){
+    include "connection.php";
+    include "configs.php";
+    $tasks_dom_output = "";
+    $fields = extract_dom_fields($detailed_task_dom, "DATA_");
+    $tasks_data = data_fetcher($connection, $project, "project-tasks");
+    if ($tasks_data != false) {
+        for ($i = 0; $i < sizeof($tasks_data); $i++) {
+            $task = $tasks_data[$i]; // Datos de la tarea en cuestión
+            $n = $i + 1; // Número de tarea desde el 1 para Bootstrap
+
+            $fields_order = [10, 6, 10, 8, 4, 4, 5, 5, 6, 7, 2];
+
+            $replacing_data = [
+                $task['id_task'],
+                $task['id_user_task'],
+                $task['icon_task'],
+                $task['work_area_task'],
+                $task['phone_task'],
+                $task['mobile_task'],
+                $task['company_task'],
+                $task['address_task'],
+                $task['team_area'],
+                $task['leader_task'],
+                $n
+            ];
+
+            $task_dom = flag_replacer($detailed_flag_task_dom, "DATA", $replacing_data, $fields_order);
+
+            $tasks_dom_output .= $task_dom;
+        }
+        $tasks_dom_output = str_replace("INSERT_TASKS_DOM", $tasks_dom_output, $detail_tasks_dom);
+        return $tasks_dom_output;
+    } else {
+        return "<p class='text-center fw-bold w-100'>No hay tareas registradas.</p>";
+    }
+}

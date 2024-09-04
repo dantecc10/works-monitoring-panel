@@ -87,6 +87,10 @@ $detail_teams_dom = '
 </section>
 ';
 
+$detail_tasks_dom = '
+    
+';
+
 $detailed_team_dom = '<div class="accordion-item">
                                 <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed bg-color-5 color-2 fw-bolder fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-n" aria-expanded="false" aria-controls="accordion-3 .item-n">DATA_COMPANY_TEAM</button></h2>
                                 <div class="accordion-collapse collapse item-n bg-color-2" role="tabpanel" data-bs-parent="#accordion-3">
