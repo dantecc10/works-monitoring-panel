@@ -232,7 +232,9 @@ $js_imgs_array .= "];</script>";
                                             function build_main_carousel(images) {
                                                 let carousel = document.querySelector("#carousel-1");
                                                 let carousel_inner = carousel.querySelector(".carousel-inner");
+                                                carousel_inner.innerHTML = "";
                                                 let carousel_indicators = carousel.querySelector(".carousel-indicators");
+                                                carousel_indicators.innerHTML = "";
                                                 let k = 0;
                                                 for (let i = 0; i < images.length; i++) {
                                                     for (let j = 0; j < images[i].length; j++) {
