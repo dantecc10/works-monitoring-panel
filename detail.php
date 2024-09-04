@@ -289,32 +289,32 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
                         </div>
                     </div>
                 </section>
-                <div class="modal fade modal-xl" role="dialog" tabindex="-1" id="modal-graphical-evidence" aria-labelledby="modal-graphical-evidence">
+                <div class="modal fade modaL-xl" role="dialog" tabindex="-1" id="modal-graphical-evidence" aria-labelledby="modal-graphical-evidence">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Evidencia gráfica de la actividad</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                        <div class="modal-content rounded-5 bg-color-3 color-2">
+                            <div class="modal-header bg-color-5 rounded-4">
+                                <h4 class="modal-title color-3 fw-bolder">Evidencia gráfica de la actividad</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Estas son las imágenes para mostrar sobre la tarea seleccionada.</p>
+                                <p class="fs-5">Estas son las imágenes para mostrar sobre la tarea seleccionada.</p>
                                 <div class="row">
                                     <div class="col" style="max-height: 52vh !important;">
-                                        <div class="carousel slide" data-bs-ride="false" id="carousel-2" style="max-height: inherit;">
+                                        <div class="carousel slide" data-bs-ride="false" id="carousel-evidence" style="max-height: inherit;">
                                             <div class="carousel-inner" style="max-height: inherit;">
                                                 <div class="carousel-item active text-center" style="max-height: inherit;"><img class="w-100 d-block" src="assets/img/logo.png" alt="Slide Image" style="max-height: inherit; width: auto !important; display: inline-flex !important;"></div>
                                                 <div class="carousel-item text-center" style="max-height: inherit;"><img class="w-100 d-block" src="https://images8.alphacoders.com/456/456424.jpg" alt="Slide Image" style="max-height: inherit; width: auto !important; display: inline-flex !important;"></div>
                                                 <div class="carousel-item text-center" style="max-height: inherit;"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image" style="max-height: inherit; width: auto !important; display: inline-flex !important;"></div>
                                             </div>
                                             <div>
-                                                <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><!-- End: Previous -->
-                                                <!-- Start: Next --><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a><!-- End: Next -->
+                                                <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-evidence" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><!-- End: Previous -->
+                                                <!-- Start: Next --><a class="carousel-control-next" href="#carousel-evidence" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a><!-- End: Next -->
                                             </div>
-                                            <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="2"></button></div>
+                                            <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-evidence" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-evidence" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-evidence" data-bs-slide-to="2"></button></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cerrar</button><button class="btn btn-primary visually-hidden" type="button">Añadir</button></div>
+                            <div class="modal-footer bg-color-2 rounded-5"><button class="btn btn-light bg-color-5 color-1" type="button" data-bs-dismiss="modal">Cerrar</button><button class="btn btn-primary visually-hidden" type="button">Añadir</button></div>
                         </div>
                     </div>
                 </div>
@@ -330,6 +330,7 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/wap.js"></script>
 </body>
 
 </html>

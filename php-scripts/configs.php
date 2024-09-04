@@ -88,7 +88,27 @@ $detail_teams_dom = '
 ';
 
 $detail_tasks_dom = '
-    
+    <section id="tasks">
+        <div class="container-fluid">
+            <div class="card shadow mb-3">
+                <div class="card-header py-3 bg-color-3">
+                    <p class="text-primary m-0 fw-bold color-5 fs-5">Registro de actividades</p>
+                </div>
+                <div class="card-body bg-color-2">
+                    <div class="row">
+                        <div class="col">
+                            <p class="fs-5 mb-2" style="text-align: justify !important; text-indent: 5% !important;">Revisa y analiza cada actividad realizada por los equipos que trabajan en esta obra.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="overflow-y: auto;">
+                            INSERT_TASKS_DOM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 ';
 
 $detailed_team_dom = '<div class="accordion-item">
@@ -148,3 +168,31 @@ $detailed_flag_team_dom = '<div class="accordion-item">
                                     </div>
                                 </div>
                             </div>';
+
+$detailed_flag_task_dom = '
+    <div class="row rounded-4 mb-2" style="background-color: var(--color-6);">
+        <div class="col align-self-center text-center col-12 bg-color-3 rounded-4"><span class="fs-4 fw-bolder text-black-50 color-2">DATA</span>
+            <hr class="m-0"><span class="small fw-bolder text-black-50 color-2"><strong>DATA</strong></span>
+        </div>
+        <div class="col align-self-center text-center col-12 col-md-9 col-xl-10"><span class="fw-bold color-2">Equipo</span>
+            <p class="align-self-center fw-bold">Actividad realizada por: <a href="#teams"><em>DATA</em></a>&nbsp;(DATA)</p>
+            <p class="align-self-center fw-bold rounded-4">Responsable: DATA DATA</p>
+        </div>
+        <div class="col text-center align-self-center"><img class="rounded-circle" src="DATA" height="60em"></div>
+        <div class="col align-self-center text-center col-12 col-lg-6"><span class="fw-bold color-2">Descripción</span>
+            <p class="align-self-center fw-bold">DATA</p>
+        </div>
+        <div class="col align-self-center text-center col-12 col-lg-6"><span class="fw-bold color-2">Comentarios</span>
+            <p class="align-self-center fw-bold">DATA</p>
+        </div>
+        <div class="col col-12 text-center rounded-4 bg-color-5"><button class="btn fw-bolder fs-4" data-bs-toggle="modal" data-bs-target="#modal-graphical-evidence" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-photo-share">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 8h.01"></path>
+                    <path d="M12 21h-6a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v7"></path>
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0"></path>
+                    <path d="M16 22l5 -5"></path>
+                    <path d="M21 21.5v-4.5h-4.5"></path>
+                </svg>&nbsp;Ver galería</button></div>
+    </div>
+';
