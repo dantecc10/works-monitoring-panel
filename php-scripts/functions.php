@@ -123,7 +123,7 @@ function data_fetcher($connection, $element_id, $type)
                           WHEN `teams`.`work_area_team` = 2 THEN 'Plomería'
                           WHEN `teams`.`work_area_team` = 3 THEN 'Civil'
                         	ELSE 'Área Desconocida'
-                        END AS `team_area`, `teams`.`icon_team`, `u`.`name_user`, `u`.`last_names_user` FROM `tasks` `t` JOIN `teams` ON `t`.`id_team_task` = `teams`.`id_team` JOIN `users` `u` ON `teams`.`id_user_team` = `u`.`id_user` WHERE (`id_project_task` = 2) ORDER BY (`date_task`) DESC;";
+                        END AS `team_area`, `teams`.`icon_team`, `u`.`name_user`, `u`.`last_names_user` FROM `tasks` `t` JOIN `teams` ON `t`.`id_team_task` = `teams`.`id_team` JOIN `users` `u` ON `teams`.`id_user_team` = `u`.`id_user` WHERE (`id_project_task` = ?) ORDER BY (`date_task`) DESC;";
             $only_row = false;
             break;
         case "task-imgs":
