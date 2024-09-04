@@ -230,41 +230,53 @@ $js_imgs_array .= "];</script>";
                                         </div>
                                         <script lang="javascript">
                                             function build_main_carousel(images) {
+                                                // Get the carousel and its inner content elements
                                                 let carousel = document.querySelector("#carousel-1");
                                                 let carousel_inner = carousel.querySelector(".carousel-inner");
-                                                carousel_inner.innerHTML = "";
+                                                carousel_inner.innerHTML = ""; // Clear existing content
                                                 let carousel_indicators = carousel.querySelector(".carousel-indicators");
-                                                carousel_indicators.innerHTML = "";
-                                                let k = 0;
+                                                carousel_indicators.innerHTML = ""; // Clear existing indicators
+                                                let k = 0; // Indicator index tracker
+
+                                                // Iterate over the images array to build carousel items and indicators
                                                 for (let i = 0; i < images.length; i++) {
                                                     for (let j = 0; j < images[i].length; j++) {
+                                                        // Create carousel item and indicator button
                                                         let carousel_item = document.createElement("div");
                                                         let carousel_indicator = document.createElement("button");
+
+                                                        // Add appropriate classes
                                                         carousel_item.classList.add("carousel-item", "text-center");
                                                         carousel_indicator.setAttribute("type", "button");
                                                         carousel_indicator.setAttribute("data-bs-target", "#carousel-1");
                                                         carousel_indicator.setAttribute("data-bs-slide-to", k);
+
+                                                        // Set active class for the first item
                                                         if (i === 0 && j === 0) {
                                                             carousel_item.classList.add("active");
                                                             carousel_indicator.classList.add("active");
                                                         }
 
-                                                        carousel_item.style.maxHeight = "inherit !important";
-                                                        carousel_img = document.createElement("img");
+                                                        // Create the image element and set its styles
+                                                        let carousel_img = document.createElement("img");
                                                         carousel_img.classList.add("w-100", "d-block");
                                                         carousel_img.style.maxHeight = "inherit";
-                                                        carousel_img.style.width = "auto !important";
-                                                        carousel_img.style.display = "inline-flex !important";
+                                                        carousel_img.style.width = "auto";
+                                                        carousel_img.style.display = "inline-flex";
                                                         carousel_img.style.minHeight = "70vh";
-                                                        carousel_img.src = images[j];
+                                                        carousel_img.src = images[i][j]; // Fixed: corrected the image source index
+                                                        carousel_item.style.maxHeight = "inherit !important";
                                                         carousel_item.appendChild(carousel_img);
-                                                        carousel_inner.appendChild(carousel_item);
 
+                                                        // Append the item and indicator to the carousel
+                                                        carousel_inner.appendChild(carousel_item);
                                                         carousel_indicators.append(carousel_indicator);
-                                                        k++;
+
+                                                        k++; // Increment indicator index
                                                     }
                                                 }
                                             }
+
                                         </script>
                                     </div>
                                 </div>
