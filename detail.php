@@ -286,6 +286,8 @@ $js_imgs_array .= "];</script>";
                                                     taskContainer.addEventListener("click", () => {
                                                         // Mostramos el índice del elemento clickeado
                                                         console.log(`Índice: ${index}`);
+                                                        // Llamamos a la función para construir el carrusel de evidencia gráfica
+                                                        build_evidence_carousel(imgs, index);
                                                     });
                                                 });
                                             }
@@ -329,6 +331,52 @@ $js_imgs_array .= "];</script>";
                                             </div>
                                             <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-evidence" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-evidence" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-evidence" data-bs-slide-to="2"></button></div>
                                         </div>
+                                        <script lang="javascript">
+                                            function build_evidence_carousel(images, index) {
+                                                // Get the carousel and its inner content elements
+                                                let carousel = document.querySelector("#carousel-evidence");
+                                                let carousel_inner = carousel.querySelector(".carousel-inner");
+                                                carousel_inner.innerHTML = ""; // Clear existing content
+                                                let carousel_indicators = carousel.querySelector(".carousel-indicators");
+                                                carousel_indicators.innerHTML = ""; // Clear existing indicators
+                                                let k = 0; // Indicator index tracker
+
+                                                // Iterate over the images array to build carousel items and indicators
+                                                for (let i = 0; i < images[index].length; i++) {
+                                                    // Create carousel item and indicator button
+                                                    let carousel_item = document.createElement("div");
+                                                    let carousel_indicator = document.createElement("button");
+
+                                                    // Add appropriate classes
+                                                    carousel_item.classList.add("carousel-item", "text-center");
+                                                    carousel_indicator.setAttribute("type", "button");
+                                                    carousel_indicator.setAttribute("data-bs-target", "#carousel-evidence");
+                                                    carousel_indicator.setAttribute("data-bs-slide-to", k);
+
+                                                    // Set active class for the first item
+                                                    if (i === 0) {
+                                                        carousel_item.classList.add("active");
+                                                        carousel_indicator.classList.add("active");
+                                                    }
+
+                                                    // Create the image element and set its styles
+                                                    let carousel_img = document.createElement("img");
+                                                    carousel_img.classList.add("w-100", "d-block");
+                                                    carousel_img.style.maxHeight = "inherit";
+                                                    carousel_img.style.width = "auto";
+                                                    carousel_img.style.display = "inline-flex";
+                                                    carousel_img.src = images[index][i]; // Fixed: corrected the image source index
+                                                    carousel_item.style.maxHeight = "inherit !important";
+                                                    carousel_item.appendChild(carousel_img);
+
+                                                    // Append the item and indicator to the carousel
+                                                    carousel_inner.appendChild(carousel_item);
+                                                    carousel_indicators.append(carousel_indicator);
+
+                                                    k++; // Increment indicator index
+                                                }
+                                            }
+                                        </script>
                                     </div>
                                 </div>
                             </div>
