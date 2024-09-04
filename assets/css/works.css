@@ -203,6 +203,6 @@
 }
 
 .modal-content:hover, .modal-content .modal-header:hover, .modal-content .modal-footer:hover {
-  opacity: 100%;
+  opacity: 100% !important;
 }
 
