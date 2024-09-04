@@ -255,8 +255,10 @@ $js_imgs_array .= "];</script>";
                                                         carousel_img.style.display = "inline-flex !important";
                                                         carousel_img.style.minHeight = "70vh";
                                                         carousel_img.src = images[j];
-
+                                                        carousel_item.appendChild(carousel_img);
                                                         carousel_inner.appendChild(carousel_item);
+
+                                                        carousel_indicators.append(carousel_indicator);
                                                         k++;
                                                     }
                                                 }
