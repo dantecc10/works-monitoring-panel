@@ -284,8 +284,6 @@ $js_imgs_array .= "];</script>";
                                                 // Iteramos sobre cada elemento para agregar un listener de clic
                                                 taskContainers.forEach((taskContainer, index) => {
                                                     taskContainer.addEventListener("click", () => {
-                                                        // Mostramos el índice del elemento clickeado
-                                                        console.log(`Índice: ${index}`);
                                                         // Llamamos a la función para construir el carrusel de evidencia gráfica
                                                         build_evidence_carousel(imgs, index);
                                                     });
