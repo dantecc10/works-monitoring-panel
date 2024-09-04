@@ -117,7 +117,7 @@ function data_fetcher($connection, $element_id, $type)
             $only_row = false;
             break;
         case "project-tasks":
-            $query = "SELECT `t`.*, `u`.`name_user`, `u`.`last_names_user` FROM `tasks` `t` JOIN `users` `u` ON `u`.`` WHERE (`id_project_task` = ?) ORDER BY (`date_task`) DESC;";
+            $query = "SELECT `t`.*, `teams`.`company_team`, `teams`.`icon_team`, `u`.`name_user`, `u`.`last_names_user` FROM `tasks` `t` JOIN `teams` ON `t`.`id_team_task` = `teams`.`id_team` JOIN `users` `u` ON `teams`.`id_user_team` = `u`.`id_user` WHERE (`id_project_task` = ?) ORDER BY (`date_task`) DESC;";
             $only_row = false;
             break;
         case "task-imgs":
@@ -251,31 +251,36 @@ function get_imgs_array($project_id, $task)
     return $imgs_array;
 }
 
-function detail_build_tasks($project){
+function detail_build_tasks($project)
+{
     include "connection.php";
     include "configs.php";
     $tasks_dom_output = "";
-    $fields = extract_dom_fields($detailed_task_dom, "DATA_");
+    //$fields = extract_dom_fields($detailed_task_dom, "DATA_");
     $tasks_data = data_fetcher($connection, $project, "project-tasks");
     if ($tasks_data != false) {
         for ($i = 0; $i < sizeof($tasks_data); $i++) {
             $task = $tasks_data[$i]; // Datos de la tarea en cuestión
             $n = $i + 1; // Número de tarea desde el 1 para Bootstrap
 
-            $fields_order = [10, 6, 10, 8, 4, 4, 5, 5, 6, 7, 2];
+            $fields_order = [1, 5, 10, 11, 13, 14, 12, 2, 7];
 
             $replacing_data = [
                 $task['id_task'],
-                $task['id_user_task'],
+                $task['name_task'],
+                $task['description_task'],
+                $task['id_project_task'],
+                $task['id_team_task'],
+                $task['date_task'],
+                $task['progress_task'],
+                $task['comments_task'],
                 $task['icon_task'],
-                $task['work_area_task'],
-                $task['phone_task'],
-                $task['mobile_task'],
-                $task['company_task'],
-                $task['address_task'],
+                $task['graphical_evidence_task'],
+                $task['company_team'],
                 $task['team_area'],
-                $task['leader_task'],
-                $n
+                $task['icon_team'],
+                $task['name_user'],
+                $task['last_names_user']
             ];
 
             $task_dom = flag_replacer($detailed_flag_task_dom, "DATA", $replacing_data, $fields_order);
