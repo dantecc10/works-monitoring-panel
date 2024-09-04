@@ -35,7 +35,7 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
     <div id="wrapper">
         <nav class="navbar align-items-start sidebar sidebar-dark accordion main-gradient p-0 navbar-dark">
             <div class="container-fluid d-flex flex-column p-0 text-center"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon" style="height: inherit;"><img src="assets/img/logo.png" style="height: inherit;"></div>
+                    <div class="sidebar-brand-icon" style="height: inherit;"><img src="assets/img/logo-nuevo.png" style="height: inherit;"></div>
                     <div class="sidebar-brand-text mx-3"><span>Obras - BMD</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
