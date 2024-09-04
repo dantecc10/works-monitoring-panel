@@ -276,6 +276,19 @@ $js_imgs_array .= "];</script>";
                                                     }
                                                 }
                                             }
+
+                                            function addTaskContainerClickListeners() {
+                                                // Seleccionamos todos los elementos con la clase 'task-container'
+                                                const taskContainers = document.querySelectorAll(".task-container");
+
+                                                // Iteramos sobre cada elemento para agregar un listener de clic
+                                                taskContainers.forEach((taskContainer, index) => {
+                                                    taskContainer.addEventListener("click", () => {
+                                                        // Mostramos el índice del elemento clickeado
+                                                        console.log(`Índice: ${index}`);
+                                                    });
+                                                });
+                                            }
                                         </script>
                                     </div>
                                 </div>
@@ -338,6 +351,7 @@ $js_imgs_array .= "];</script>";
     <script src="assets/js/wap.js"></script>
     <script lang="javascript">
         build_main_carousel(imgs);
+        addTaskContainerClickListeners();
     </script>
 </body>
 

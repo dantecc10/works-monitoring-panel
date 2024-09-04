@@ -170,7 +170,7 @@ $detailed_flag_team_dom = '<div class="accordion-item">
                             </div>';
 
 $detailed_flag_task_dom = '
-    <div class="row rounded-4 mb-2" style="background-color: var(--color-6);">
+    <div class="row rounded-4 mb-2 task-container" style="background-color: var(--color-6);">
         <div class="col align-self-center text-center col-12 bg-color-3 rounded-4"><span class="fs-4 fw-bolder text-black-50 color-2">DATA</span>
             <hr class="m-0"><span class="small fw-bolder text-black-50 color-2"><strong>DATA</strong></span>
         </div>
