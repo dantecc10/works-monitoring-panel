@@ -170,7 +170,7 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col text-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png"></div>
+                                            <div class="col text-center"><img class="col col-12 col-sm-6 col-md-8 col-xl-5 rounded-circle" src="<?php echo ($project_data['icon_user']); ?>"></div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
