@@ -7,6 +7,21 @@ include "php-scripts/functions.php";
 include "php-scripts/configs.php";
 
 $project_data = data_fetcher($connection, $_GET['id'], "project");
+$imgs = data_fetcher($connection, $_GET['id'], "task-project-imgs");
+
+$js_imgs_array = "<script lang='javascript'>const imgs = [";
+for ($i = 0; $i < sizeof($imgs); $i++) {
+    $js_imgs_array .= "[";
+    if (str_contains($imgs[0], ",")) {
+        $temp_imgs = explode(",", $imgs[$i]);
+        for ($j = 0; $j < sizeof($temp_imgs); $j++) {
+            $js_imgs_array .= ($j == (sizeof($temp_imgs) - 1)) ? ("'" . $temp_imgs[$j] . "', ") : ("'" . $temp_imgs[$j] . "']");
+        }
+    } else {
+        $js_imgs_array .= "['" . $imgs[$i] . "']";
+    }
+}
+$js_imgs_array .= "];</script>";
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +47,9 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
 </head>
 
 <body id="page-top">
+    <?php
+    echo $js_imgs_array;
+    ?>
     <div id="wrapper">
         <nav class="navbar align-items-start sidebar sidebar-dark accordion main-gradient p-0 navbar-dark">
             <div class="container-fluid d-flex flex-column p-0 text-center"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
@@ -197,11 +215,11 @@ $project_data = data_fetcher($connection, $_GET['id'], "project");
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <div class="carousel slide" data-bs-ride="false" id="carousel-1">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active"><img class="w-100 d-block" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2024/06/11/17180958027686.jpg" alt="Slide Image"></div>
-                                                <div class="carousel-item"><img class="w-100 d-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkseP-1vFhKGGHLiHgbzK8iVcqzRgJ027CFl3R5WYH0n0a3bzGQW4C85Jl1mQJiIYukMk&amp;usqp=CAU" alt="Slide Image"></div>
-                                                <div class="carousel-item"><img class="w-100 d-block" src="https://img.fcbayern.com/image/upload/t_cms-2x1/f_auto/w_1600%2Cc_fill/q_auto/v1688540333/cms/public/images/fcbayern-com/homepage/stadien/allianz-arena/230419-allianz-arena-get.jpg" alt="Slide Image"></div>
+                                        <div class="carousel slide" data-bs-ride="false" id="carousel-1" style="max-height: 80vh;">
+                                            <div class="carousel-inner" style="max-height: inherit !important;">
+                                                <div class="carousel-item active text-center" style="max-height: inherit !important;"><img class="w-100 d-block" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2024/06/11/17180958027686.jpg" alt="Slide Image" style="max-height: inherit; width: auto !important; display: inline-flex !important; min-height: 70vh;"></div>
+                                                <div class="carousel-item text-center" style="max-height: inherit !important;"><img class="w-100 d-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkseP-1vFhKGGHLiHgbzK8iVcqzRgJ027CFl3R5WYH0n0a3bzGQW4C85Jl1mQJiIYukMk&amp;usqp=CAU" alt="Slide Image" style="max-height: inherit; width: auto !important; display: inline-flex !important; min-height: 70vh;"></div>
+                                                <div class="carousel-item text-center" style="max-height: inherit !important;"><img class="w-100 d-block" src="https://img.fcbayern.com/image/upload/t_cms-2x1/f_auto/w_1600%2Cc_fill/q_auto/v1688540333/cms/public/images/fcbayern-com/homepage/stadien/allianz-arena/230419-allianz-arena-get.jpg" alt="Slide Image" style="max-height: inherit; width: auto !important; display: inline-flex !important; min-height: 70vh;"></div>
                                             </div>
                                             <div>
                                                 <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><!-- End: Previous -->

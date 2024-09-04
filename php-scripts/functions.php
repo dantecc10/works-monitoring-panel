@@ -127,7 +127,11 @@ function data_fetcher($connection, $element_id, $type)
             $only_row = false;
             break;
         case "task-imgs":
-            $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE `id_task` = ?;";
+            $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE (`id_task` = ?);";
+            $only_row = false;
+            break;
+        case "task-project-imgs":
+            $query = "SELECT `graphical_evidence_task` FROM `tasks` WHERE (`id_project_task` = ?) ORDER BY (`date_task`) DESC;";
             $only_row = false;
             break;
         case "project":
