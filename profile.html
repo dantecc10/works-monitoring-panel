@@ -132,15 +132,15 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Profile</h3>
+                    <h3 class="text-dark mb-4 color-5 fw-bolder">Perfil</h3>
                     <div class="row mb-3">
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/avatars/default-avatar.png" width="160" height="160">
-                                    <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Cambiar imagen de perfil</button></div>
+                                    <div class="mb-3"><button class="btn btn-sm bg-color-5 color-2 fw-bolder fs-6 rounded-5" type="button">Cambiar imagen de perfil</button></div>
                                 </div>
                             </div>
-                            <div class="card shadow mb-4">
+                            <div class="card shadow mb-4 visually-hidden">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary fw-bold m-0">Projects</h6>
                                 </div>
@@ -206,7 +206,7 @@
                                             <p class="text-primary m-0 fw-bold">Datos de usuario</p>
                                         </div>
                                         <div class="card-body">
-                                            <form>
+                                            <form id="user-data-form" method="post" action="php-scripts/tasks.php?task=update-user-data">
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="mb-3"><label class="form-label" for="first_name"><strong>Nombre(s)</strong></label><input class="form-control" type="text" id="name_form" placeholder="Nombre" name="name" onchange="javascript:document.querySelector(&#39;#user-data-submitter&#39;).classList.remove(&#39;disabled&#39;);;" required=""></div>
@@ -220,7 +220,7 @@
                                                         <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input class="form-control" type="email" id="email" placeholder="user@example.com" name="email" onchange="javascript:document.querySelector(&#39;#user-data-submitter&#39;).classList.remove(&#39;disabled&#39;);;" required=""></div>
                                                     </div>
                                                 </div>
-                                                <div class="mb-3"><button class="btn btn-sm bg-color-1 color-5 fw-bolder rounded-3 fs-6 disabled" id="user-data-submitter" type="submit">Guardar cambios</button></div>
+                                                <div class="mb-3 text-center"><button class="btn btn-sm bg-color-1 color-5 fw-bolder rounded-3 fs-6 disabled" id="user-data-submitter" type="submit">Guardar cambios</button></div>
                                             </form>
                                         </div>
                                     </div>
