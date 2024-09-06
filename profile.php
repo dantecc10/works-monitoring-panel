@@ -4,8 +4,8 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 }
-include 'functions.php';
-include 'connection.php';
+include 'php-scripts/functions.php';
+include 'php-scripts/connection.php';
 ?>
 
 <!DOCTYPE html>
