@@ -36,14 +36,17 @@ switch ($_GET['task']) {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['img'])) {
             $file = $_FILES['img'];
-            $fileName = basename($file['name']);
-            $targetFilePath = $img_location . $fileName;
 
-            // Verifica si el archivo es una imagen
-            $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
+            // Obtener la extensión del archivo
+            $fileType = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
             $allowedTypes = ['jpg', 'jpeg', 'png', 'gif'];
 
+            // Verifica si el archivo es una imagen permitida
             if (in_array($fileType, $allowedTypes)) {
+                // Crear un nombre único para la imagen incluyendo la extensión
+                $fileName = "avatar-img-" . date('d-m-y_H-i-s') . "." . $fileType;
+                $targetFilePath = $img_location . $fileName;
+
                 // Intenta mover el archivo al directorio de destino
                 if (move_uploaded_file($file['tmp_name'], $targetFilePath)) {
                     echo "La imagen se ha cargado correctamente: " . $fileName;
@@ -57,6 +60,7 @@ switch ($_GET['task']) {
             echo "No se ha recibido ninguna imagen.";
         }
         break;
+
 
     default:
         # code...
