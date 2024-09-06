@@ -143,7 +143,7 @@ if (!isset($_SESSION['loggedin'])) {
                                         <img class="border rounded-circle img-profile" src="<?php echo (isset($_SESSION['icon_user'])) ? ($_SESSION['icon_user']) : ("assets/img/avatars/avatar1.jpeg"); ?>">
                                     </a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
-                                        <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a>
+                                        <a class="dropdown-item" href="profile.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Configuración</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Actividad</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="php-scripts/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Cerrar sesión</a>
