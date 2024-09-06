@@ -35,7 +35,7 @@ switch ($_GET['task']) {
         $img_location = '../assets/img/avatars/uploaded/';
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['img'])) {
-            $file = $_FILES['image'];
+            $file = $_FILES['img'];
             $fileName = basename($file['name']);
             $targetFilePath = $img_location . $fileName;
 
