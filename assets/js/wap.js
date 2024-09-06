@@ -33,3 +33,20 @@ function build_carousel(imgs) {
         }
     }
 }
+
+
+function img_picker(task) {
+    const button = document.querySelector('#change-img-button');
+    switch (task) {
+        case 'pick':
+            document.getElementById('img-form').click();
+            break;
+        case 'picked':
+            const img = document.getElementById('img-form').files[0];
+            document.querySelector('#avatar-img').setAttribute('src', URL.createObjectURL(img));
+            button.innerHTML = 'Guardar cambio';
+            button.setAttribute('onclick', '');
+            button.setAttribute('type', 'submit');
+            break;
+    }
+}
