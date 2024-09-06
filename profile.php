@@ -1,10 +1,20 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.php');
+    exit;
+}
+include 'functions.php';
+include 'connection.php';
+?>
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="es-mx">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Profile - BM Design</title>
+    <title><?php echo ($_SESSION['name_user'] . " - "); ?>Perfil - BM Design</title>
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta name="description" content="Plataforma de administración de obras y construcción.">
     <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/logo-nuevo.png">
@@ -136,7 +146,7 @@
                     <div class="row mb-3">
                         <div class="col-lg-4">
                             <div class="card mb-3">
-                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/avatars/default-avatar.png" width="160" height="160">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="<?php echo (isset($_SESSION['icon_user'])) ? $_SESSION['icon_user']  : "assets/img/avatars/default-avatar.png"; ?>" width="160" height="160">
                                     <div class="mb-3"><button class="btn btn-sm bg-color-5 color-2 fw-bolder fs-6 rounded-5" type="button">Cambiar imagen de perfil</button></div>
                                 </div>
                             </div>
@@ -209,15 +219,15 @@
                                             <form id="user-data-form" method="post" action="php-scripts/tasks.php?task=update-user-data">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="first_name"><strong>Nombre(s)</strong></label><input class="form-control" type="text" id="name_form" placeholder="Nombre" name="name" onchange="javascript:document.querySelector(&#39;#user-data-submitter&#39;).classList.remove(&#39;disabled&#39;);;" required=""></div>
+                                                        <div class="mb-3"><label class="form-label" for="first_name"><strong>Nombre(s)</strong></label><input class="form-control" type="text" id="name_form" placeholder="Nombre" name="name" value="<?php echo ($_SESSION['name_user']); ?>" onchange="javascript:document.querySelector('user-data-submitter').classList.remove('disabled');" required=""></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="last_name"><strong>Apellidos</strong></label><input class="form-control" type="text" id="last_names_form" placeholder="Apellidos" name="last_names" onchange="javascript:document.querySelector(&#39;#user-data-submitter&#39;).classList.remove(&#39;disabled&#39;);;" required=""></div>
+                                                        <div class="mb-3"><label class="form-label" for="last_name"><strong>Apellidos</strong></label><input class="form-control" type="text" id="last_names_form" placeholder="Apellidos" name="last_names" value="<?php echo ($_SESSION['last_names_user']); ?>" onchange="javascript:document.querySelector('user-data-submitter').classList.remove('disabled');" required=""></div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input class="form-control" type="email" id="email" placeholder="user@example.com" name="email" onchange="javascript:document.querySelector(&#39;#user-data-submitter&#39;).classList.remove(&#39;disabled&#39;);;" required=""></div>
+                                                        <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input class="form-control" type="email" id="email" placeholder="user@example.com" name="email" value="<?php echo ($_SESSION['email_user']); ?>" onchange="javascript:document.querySelector('user-data-submitter').classList.remove('disabled');;" required=""></div>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3 text-center"><button class="btn btn-sm bg-color-1 color-5 fw-bolder rounded-3 fs-6 disabled" id="user-data-submitter" type="submit">Guardar cambios</button></div>
