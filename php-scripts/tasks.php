@@ -50,6 +50,20 @@ switch ($_GET['task']) {
                 // Intenta mover el archivo al directorio de destino
                 if (move_uploaded_file($file['tmp_name'], $targetFilePath)) {
                     echo "La imagen se ha cargado correctamente: " . $fileName;
+                    $sql = "UPDATE `users` SET `icon_user` = ? WHERE `id_user` = ?";
+                    if ($stmt = $connection->prepare($sql)) {
+                        $stmt->bind_param("si", $targetFilePath, $_SESSION['id_user']);
+                        if ($stmt->execute()) {
+                            $_SESSION['icon_user'] = $targetFilePath;
+                            $_SESSION['pending_msg']['type'] = 'success';
+                            $_SESSION['pending_msg']['text'] = 'Imagen actualizada correctamente.';
+                            header('Location: ../profile.php?success=updated');
+                        } else {
+                            header('Location: ../profile.php?error=update');
+                            exit;
+                        }
+                        $stmt->close();
+                    }
                 } else {
                     echo "Hubo un error al cargar la imagen.";
                 }
