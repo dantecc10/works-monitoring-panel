@@ -34,7 +34,7 @@ switch ($_GET['task']) {
     case 'update-user-img':
         $img_location = '../assets/img/avatars/uploaded/';
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['img'])) {
             $file = $_FILES['image'];
             $fileName = basename($file['name']);
             $targetFilePath = $img_location . $fileName;
