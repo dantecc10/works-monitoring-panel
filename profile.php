@@ -156,7 +156,7 @@ include 'php-scripts/connection.php';
                                 <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" id="avatar-img" src="<?php echo (isset($_SESSION['icon_user'])) ? $_SESSION['icon_user']  : "assets/img/avatars/default-avatar.png"; ?>" width="160" height="160">
                                     <form id="form-img" method="post" action="php-scripts/tasks.php?task=update-user-img" enctype="multipart/form-data">
                                         <div class="mb-3"><button class="btn btn-sm bg-color-5 color-2 fw-bolder fs-6 rounded-5" id="change-img-button" type="button" onclick="javascript:img_picker('pick');">Cambiar imagen de perfil</button>
-                                        <input class="form-control visu" type="file" id="img-form" name="img" required="" onchange="javascript:img_picker('picked');" accept="image/*"></div>
+                                        <input class="form-control visually-hidden" type="file" id="img-form" name="img" required="" onchange="javascript:img_picker('picked');" accept="image/*"></div>
                                     </form>
                                 </div>
                             </div>
