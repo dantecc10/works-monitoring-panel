@@ -22,7 +22,14 @@ function show_projects($id)
         return "<p class='text-center fw-bold w-100'>No hay proyectos registrados a los que tenga acceso.</p>";
     } else {
         for ($i = 0; $i < sizeof($projects_data); $i++) {
-            $data = [$projects_data['id_project'], $projects_data['name_project'], $projects_data['description_project'], $projects_data['owner_project'], $projects_data['icon_project'], ($i + 1), $projects_data['name_user'], $projects_data['last_names_user'], $projects_data['icon_user']];
+            $data = [$projects_data[$i]['id_project'], 
+                    $projects_data[$i]['name_project'], 
+                    $projects_data[$i]['description_project'], 
+                    $projects_data[$i]['owner_project'], 
+                    $projects_data[$i]['icon_project'], ($i + 1), 
+                    $projects_data[$i]['name_user'], 
+                    $projects_data[$i]['last_names_user'], 
+                    $projects_data[$i]['icon_user']];
             $indexes = [5, 5, 5, 1, 5, 2, 5, 6, 7, 5, 5, 5];
             $projects_dom_output .= flag_replacer($project_dom, "FLAG", $data, $indexes);
         }
