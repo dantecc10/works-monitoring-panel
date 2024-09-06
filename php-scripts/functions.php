@@ -38,27 +38,6 @@ function show_projects($id)
         }
         return $projects_dom_output;
     }
-
-    /*if ($stmt = $connection->prepare($sql)) {
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            for ($i = 0; $i < $result->num_rows; $i++) {
-                $row = $result->fetch_assoc();
-                $data = [$row['id_project'], $row['name_project'], $row['description_project'], $row['owner_project'], $row['icon_project'], ($i + 1)];
-                $indexes = [5, 5, 5, 1, 5, 2, 5, 3, 5, 5, 5];
-                $projects_dom_output .= flag_replacer($project_dom, "FLAG", $data, $indexes);
-            }
-            $stmt->close();
-
-            $connection->close();
-
-            return $projects_dom_output;
-        } else {
-            return "<p class='text-center fw-bold w-100'>No hay proyectos registrados a los que tenga acceso.</p>";
-        }
-    }*/
 }
 
 function flag_replacer($text, $flag, $data_array, $indexes_array)
