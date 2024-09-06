@@ -44,9 +44,9 @@ if (!isset($_SESSION['loggedin'])) {
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light text-center" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="index-old.html"><i class="fas fa-tachometer-alt" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Panel</span></a></li>
-                    <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="table.html"><i class="far fa-list-alt" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Obras</span></a></li>
-                    <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="profile.html"><i class="fas fa-user" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Perfil</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="index.php"><i class="fas fa-tachometer-alt" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Panel</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="index.php"><i class="far fa-list-alt" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Obras</span></a></li>
+                    <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="profile.php"><i class="fas fa-user" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Perfil</span></a></li>
                     <li class="nav-item"><a class="nav-link text-center color-5 fw-bolder fs-6" href="login.html"><i class="far fa-user-circle" style="color: rgba(247, 92, 3, 0.7) !important;"></i><span>Iniciar sesión</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
