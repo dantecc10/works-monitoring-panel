@@ -17,7 +17,18 @@ function show_projects($id)
     include_once "configs.php";
     $sql = "SELECT * FROM `projects` WHERE `owner_project` = ?";
 
-    if ($stmt = $connection->prepare($sql)) {
+    $projects_data = data_fetcher($connection, $id, "projects");
+    if ($projects_data === false) {
+        return "<p class='text-center fw-bold w-100'>No hay proyectos registrados a los que tenga acceso.</p>";
+    } else {
+        for ($i = 0; $i < sizeof($projects_data); $i++) {
+            $data = [$projects_data['id_project'], $projects_data['name_project'], $projects_data['description_project'], $projects_data['owner_project'], $projects_data['icon_project'], ($i + 1), $projects_data['name_user'], $projects_data['last_names_user'], $projects_data['icon_user']];
+            $indexes = [5, 5, 5, 1, 5, 2, 5, 6, 7, 5, 5, 5];
+            $projects_dom_output .= flag_replacer($project_dom, "FLAG", $data, $indexes);
+        }
+    }
+
+    /*if ($stmt = $connection->prepare($sql)) {
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -36,7 +47,7 @@ function show_projects($id)
         } else {
             return "<p class='text-center fw-bold w-100'>No hay proyectos registrados a los que tenga acceso.</p>";
         }
-    }
+    }*/
 }
 
 function flag_replacer($text, $flag, $data_array, $indexes_array)
@@ -138,6 +149,12 @@ function data_fetcher($connection, $element_id, $type)
             $query = "SELECT p.*, u.name_user, u.last_names_user, u.icon_user
                         FROM projects p JOIN users u
                         ON p.owner_project = u.id_user WHERE `id_project` = ?;";
+            break;
+        case "projects":
+            $query = "SELECT p.*, u.name_user, u.last_names_user, u.icon_user
+                        FROM projects p JOIN users u
+                        ON p.owner_project = u.id_user WHERE `owner_project` = ?;";
+            $only_row = false;
             break;
         default:
             return false;

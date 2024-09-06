@@ -35,7 +35,7 @@ $project_dom = '<div class="accordion" role="tablist" id="accordion-FLAG">
                                         </div>
                                         <div class="row d-flex justify-content-center">
                                             <div class="col d-flex justify-content-center text-center align-items-center">
-                                                <p class="text-center m-0 align-middle col col-12 text-center color-1 fw-bolder fs-5">FLAG</p>
+                                                <p class="text-center m-0 align-middle col col-12 text-center color-1 fw-bolder fs-5">FLAG FLAG</p>
                                             </div>
                                         </div>
                                         <div class="row d-flex justify-content-center">
