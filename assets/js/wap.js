@@ -32,7 +32,7 @@ function build_carousel(imgs) {
             if (i === 0) {
                 indicator.classList.add('active');
             }
-            
+
             carousel.querySelector('.carousel-indicators').appendChild(indicator);
         }
     }
