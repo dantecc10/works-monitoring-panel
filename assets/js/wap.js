@@ -28,9 +28,11 @@ function build_carousel(imgs) {
             indicator.setAttribute('data-target', '#carousel-evidence');
             indicator.setAttribute('type', 'button');
             indicator.setAttribute('data-slide-to', i);
+
             if (i === 0) {
                 indicator.classList.add('active');
             }
+            
             carousel.querySelector('.carousel-indicators').appendChild(indicator);
         }
     }
