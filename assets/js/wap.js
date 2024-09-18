@@ -9,10 +9,12 @@ function build_carousel(imgs) {
         for (let i = 0; i < imgs.length; i++) {
             const slide = document.createElement('div');
             slide.classList.add('carousel-item', 'text-center');
-            slide.style.maxHeight = ("inherit !important;")
+            slide.style.maxHeight = ("inherit !important;");
+
             if (i === 0) {
                 slide.classList.add('active');
             }
+
             const img = document.createElement('img');
             img.src = imgs[i];
             img.classList.add('d-block', 'w-100');
