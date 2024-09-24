@@ -92,8 +92,7 @@ function data_fetcher($connection, $element_id, $type)
         case 'task':
             $query = "SELECT `t`.*, `p`.`name_project` AS `project_name`,
                             `tm`.`company_team` AS `team_name`
-                        FROM `tasks` `t` JOIN 
-                            `projects` `p` ON `t`.`id_project_task` = `p`.`id_project`
+                        FROM `tasks` `t` JOIN `projects` `p` ON `t`.`id_project_task` = `p`.`id_project`
                         JOIN 
                             `teams` `tm` ON `t`.`id_team_task` = `tm`.`id_team`
                         WHERE `t`.`id_task` = ?;"; // Lógica para 'task'
