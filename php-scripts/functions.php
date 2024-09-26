@@ -87,8 +87,7 @@ function data_fetcher($connection, $element_id, $type)
                 WHEN `u`.`role_user` = 2 THEN 'Equipo de Trabajo'
                 WHEN `u`.`role_user` = 3 THEN 'Administrador'
                 ELSE 'Rol Desconocido'
-            END AS `job_user`
-                FROM `users` `u` WHERE `u`.`id_user`= ?"; // Lógica para 'user'
+            END AS `job_user` FROM `users` `u` WHERE `u`.`id_user`= ?"; // Lógica para 'user'
             break;
         case 'task':
             $query = "SELECT `t`.*, `p`.`name_project` AS `project_name`,
