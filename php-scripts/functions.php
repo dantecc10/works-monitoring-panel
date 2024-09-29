@@ -70,8 +70,7 @@ function data_fetcher($connection, $element_id, $type)
                                 ELSE 'Área Desconocida'
                             END AS `team_area`,
                             CONCAT(u.name_user, ' ', u.last_names_user) AS leader_team
-                        FROM 
-                            `teams` `t`
+                        FROM `teams` `t`
                         JOIN 
                             `users` `u` ON `t`.`id_user_team` = `u`.`id_user`
                         WHERE 
