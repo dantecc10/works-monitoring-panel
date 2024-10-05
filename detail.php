@@ -31,7 +31,7 @@ $js_imgs_array .= "];</script>";
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=k1.0, shrink-to-fit=no">
     <title>Detalle de obra - <?php echo ($project_data['name_project']); ?> - BM Design</title>
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta name="description" content="Plataforma de administración de obras y construcción.">
