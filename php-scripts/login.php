@@ -31,6 +31,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION['icon_user'] = $icon_user;
                         $_SESSION['name_user'] = $name_user;
                         $_SESSION['last_names_user'] = $last_names_user;
+                        switch($role_user){
+                            case 1:
+                                $_SESSION['type_user'] = "Propietario";
+                                break;
+                            case 2:
+                                $_SESSION['type_user'] = "Equipo de Trabajo";
+                                break;
+                            default: # (3)
+                                $_SESSION['type_user'] = "Administrador";
+                                break;
+                        }
                         header("location: ../index.php");
                     } else {
                         header("location: ../login.php?error=incorrect_password");
