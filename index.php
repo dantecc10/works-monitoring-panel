@@ -140,7 +140,7 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="nav-item dropdown no-arrow">
                                     <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
                                         <span class="d-none d-lg-inline me-2 text-gray-600 small"><?php echo ($_SESSION['name_user']); ?> (Propietario)</span>
-                                        <img class="border rounded-circle img-profile" src="<?php echo (isset($_SESSION['icon_user'])) ? ($_SESSION['icon_user']) : ("assets/img/avatars/avatar1.jpeg"); ?>">
+                                        <img class="border rounded-circle img-profile" src="<?php echo (isset($_SESSION['icon_user'])) ? $_SESSION['icon_user']  : "assets/img/avatars/default-avatar.png"; ?>">
                                     </a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
                                         <a class="dropdown-item" href="profile.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a>

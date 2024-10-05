@@ -135,7 +135,7 @@ include 'php-scripts/connection.php';
                                 <div class="nav-item dropdown no-arrow">
                                     <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
                                         <span class="d-none d-lg-inline me-2 text-gray-600 small"><?php echo ($_SESSION['name_user']); ?> (Propietario)</span>
-                                        <img class="border rounded-circle img-profile" src="<?php echo (isset($_SESSION['icon_user'])) ? ($_SESSION['icon_user']) : ("assets/img/avatars/avatar1.jpeg"); ?>">
+                                        <img class="border rounded-circle img-profile" src="<?php echo (isset($_SESSION['icon_user'])) ? $_SESSION['icon_user']  : "assets/img/avatars/default-avatar.png"; ?>">
                                     </a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
                                         <a class="dropdown-item" href="profile.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a>
@@ -156,7 +156,8 @@ include 'php-scripts/connection.php';
                                 <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" id="avatar-img" src="<?php echo (isset($_SESSION['icon_user'])) ? $_SESSION['icon_user']  : "assets/img/avatars/default-avatar.png"; ?>" width="160" height="160">
                                     <form id="form-img" method="post" action="php-scripts/tasks.php?task=update-user-img" enctype="multipart/form-data">
                                         <div class="mb-3"><button class="btn btn-sm bg-color-5 color-2 fw-bolder fs-6 rounded-5" id="change-img-button" type="button" onclick="javascript:img_picker('pick');">Cambiar imagen de perfil</button>
-                                        <input class="form-control visually-hidden" type="file" id="img-form" name="img" required="" onchange="javascript:img_picker('picked');" accept="image/*"></div>
+                                            <input class="form-control visually-hidden" type="file" id="img-form" name="img" required="" onchange="javascript:img_picker('picked');" accept="image/*">
+                                        </div>
                                     </form>
                                 </div>
                             </div>
