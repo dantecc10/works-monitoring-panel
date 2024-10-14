@@ -206,3 +206,14 @@
   opacity: 100% !important;
 }
 
+section#add-user-section .nav-pills .nav-link, section#add-user-section .nav-pills > .nav-link {
+  color: var(--color-3);
+  font-weight: bolder;
+}
+
+section#add-user-section .nav-pills .nav-link.active, section#add-user-section .nav-pills .show > .nav-link {
+  background-color: var(--color-6);
+  color: var(--color-5);
+  font-weight: bolder;
+}
+

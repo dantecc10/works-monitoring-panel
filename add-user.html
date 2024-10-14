@@ -7,14 +7,6 @@
     <title>Profile - BM Design</title>
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta name="description" content="Plataforma de administración de obras y construcción.">
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "WebSite",
-            "name": "Obras - BM Design MX",
-            "url": "https://obras.bmdesign.tech"
-        }
-    </script>
     <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/logo-nuevo.png?h=711ccbc97e4ced0154104052a5d1796c">
     <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/logo-nuevo.png?h=711ccbc97e4ced0154104052a5d1796c" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/logo-nuevo.png?h=711ccbc97e4ced0154104052a5d1796c">
@@ -140,77 +132,174 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4 color-5 fw-bolder">Añadir tarea</h3>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <div class="row mb-3 d-none">
-                                <div class="col">
-                                    <div class="card text-white bg-primary shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
+                    <h3 class="text-dark mb-2 color-5 fw-bolder text-center">Añadir usuario</h3>
+                </div>
+                <section id="add-user-section">
+                    <div class="container-fluid">
+                        <div>
+                            <ul class="nav nav-tabs justify-content-center nav-pills nav-fill nav-justified" role="tablist">
+                                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab" href="#tab-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-edit">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
+                                            <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path>
+                                            <path d="M16 5l3 3"></path>
+                                        </svg>&nbsp;Registro manual</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-link-plus">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M9 15l6 -6"></path>
+                                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.072 0a4.993 4.993 0 0 1 -.001 7.072"></path>
+                                            <path d="M12.603 18.534a5.07 5.07 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
+                                            <path d="M16 19h6"></path>
+                                            <path d="M19 16v6"></path>
+                                        </svg>&nbsp;Crear enlace de registro</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" role="tabpanel" id="tab-1">
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <div class="row mb-3 d-none">
                                                 <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                    <div class="card text-white bg-primary shadow">
+                                                        <div class="card-body">
+                                                            <div class="row mb-2">
+                                                                <div class="col">
+                                                                    <p class="m-0">Peformance</p>
+                                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                                </div>
+                                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                                            </div>
+                                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                                <div class="col">
+                                                    <div class="card text-white bg-success shadow">
+                                                        <div class="card-body">
+                                                            <div class="row mb-2">
+                                                                <div class="col">
+                                                                    <p class="m-0">Peformance</p>
+                                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                                </div>
+                                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                                            </div>
+                                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card shadow mb-3">
+                                                        <div class="card-header py-3">
+                                                            <p class="text-primary m-0 fw-bold">Registre todos los campos para que la tarea sea legible y precisa</p>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <form id="add-task-form-1" method="post" action="php-scripts/tasks.php?task=add-task">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="mb-3"><label class="form-label" for="task-work"><strong>Selecciona la obra en la que se realizó la tarea</strong></label><select class="form-select" id="task-work-1">
+                                                                                <optgroup label="This is a group">
+                                                                                    <option value="12" selected="">This is item 1</option>
+                                                                                    <option value="13">This is item 2</option>
+                                                                                    <option value="14">This is item 3</option>
+                                                                                </optgroup>
+                                                                            </select></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="mb-3"><label class="form-label" for="task-name"><strong>Nombre</strong></label><input class="form-control" type="text" id="task-name-1" placeholder="Ejemplo &quot;Reparación de tuberías&quot;" name="task-name" required=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="mb-3"><label class="form-label" for="task-description"><strong>Descripción</strong></label><input class="form-control" type="text" id="task-description-1" placeholder="¿En qué consistió la actividad?" name="task-description" required=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 text-center"><button class="btn btn-sm bg-color-1 color-5 fw-bolder rounded-3 fs-6 disabled" id="user-data-submitter-1" type="submit">Guardar cambios</button></div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col">
-                                    <div class="card text-white bg-success shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
+                                <div class="tab-pane" role="tabpanel" id="tab-2">
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <div class="row mb-3 d-none">
                                                 <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                    <div class="card text-white bg-primary shadow">
+                                                        <div class="card-body">
+                                                            <div class="row mb-2">
+                                                                <div class="col">
+                                                                    <p class="m-0">Peformance</p>
+                                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                                </div>
+                                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                                            </div>
+                                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                                <div class="col">
+                                                    <div class="card text-white bg-success shadow">
+                                                        <div class="card-body">
+                                                            <div class="row mb-2">
+                                                                <div class="col">
+                                                                    <p class="m-0">Peformance</p>
+                                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                                </div>
+                                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                                            </div>
+                                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card shadow mb-3">
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold">Registre todos los campos para que la tarea sea legible y precisa</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <form id="add-task-form" method="post" action="php-scripts/tasks.php?task=add-task">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="task-work"><strong>Selecciona la obra en la que se realizó la tarea</strong></label><select class="form-select" id="task-work">
-                                                                <optgroup label="This is a group">
-                                                                    <option value="12" selected="">This is item 1</option>
-                                                                    <option value="13">This is item 2</option>
-                                                                    <option value="14">This is item 3</option>
-                                                                </optgroup>
-                                                            </select></div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card shadow mb-3">
+                                                        <div class="card-header py-3">
+                                                            <p class="text-primary m-0 fw-bold">Registre todos los campos para que la tarea sea legible y precisa</p>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <form id="add-task-form-2" method="post" action="php-scripts/tasks.php?task=add-task">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="mb-3"><label class="form-label" for="task-work"><strong>Selecciona la obra en la que se realizó la tarea</strong></label><select class="form-select" id="task-work-2">
+                                                                                <optgroup label="This is a group">
+                                                                                    <option value="12" selected="">This is item 1</option>
+                                                                                    <option value="13">This is item 2</option>
+                                                                                    <option value="14">This is item 3</option>
+                                                                                </optgroup>
+                                                                            </select></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="mb-3"><label class="form-label" for="task-name"><strong>Nombre</strong></label><input class="form-control" type="text" id="task-name-2" placeholder="Ejemplo &quot;Reparación de tuberías&quot;" name="task-name" required=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="mb-3"><label class="form-label" for="task-description"><strong>Descripción</strong></label><input class="form-control" type="text" id="task-description-2" placeholder="¿En qué consistió la actividad?" name="task-description" required=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 text-center"><button class="btn btn-sm bg-color-1 color-5 fw-bolder rounded-3 fs-6 disabled" id="user-data-submitter-2" type="submit">Guardar cambios</button></div>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="task-name"><strong>Nombre</strong></label><input class="form-control" type="text" id="task-name" placeholder="Ejemplo &quot;Reparación de tuberías&quot;" name="task-name" required=""></div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="task-description"><strong>Descripción</strong></label><input class="form-control" type="text" id="task-description" placeholder="¿En qué consistió la actividad?" name="task-description" required=""></div>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 text-center"><button class="btn btn-sm bg-color-1 color-5 fw-bolder rounded-3 fs-6 disabled" id="user-data-submitter" type="submit">Guardar cambios</button></div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
