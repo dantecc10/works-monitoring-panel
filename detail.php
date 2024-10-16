@@ -245,7 +245,7 @@ $js_imgs_array .= "];</script>";
                                             <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
                                         </div>
                                         <script lang="javascript">
-                                            function build_main_carousel(images)  {
+                                            function build_main_carousel(images) {
                                                 // Get the carousel and its inner content elements
                                                 let carousel = document.querySelector("#carousel-1");
                                                 let carousel_inner = carousel.querySelector(".carousel-inner");
