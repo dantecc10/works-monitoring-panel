@@ -22,9 +22,9 @@ for ($i = 0; $i < sizeof($imgs); $i++) {
     } else {
         $js_imgs_array .= "['" . $imgs[$i]['graphical_evidence_task'] . "']";
     }
+    
     $js_imgs_array .= ($i !== (sizeof($imgs) - 1)) ? "], " : "]";
 }
-
 $js_imgs_array .= "];</script>";
 ?>
 
