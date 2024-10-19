@@ -33,7 +33,7 @@ function show_projects($id)
                 $projects_data[$i]['last_names_user'],
                 $projects_data[$i]['icon_user']
             ];
-            $indexes = [5, 5, 5, 1, 5, 2, 5, 6, 7, 5, 5, 5];
+            $indexes = [5, 5, 5, 1, 5, 2, 0, 6, 7, 0, 0, 0];
             $projects_dom_output .= flag_replacer($project_dom, "FLAG", $data, $indexes);
         }
         return $projects_dom_output;
